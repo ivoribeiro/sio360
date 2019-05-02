@@ -1,0 +1,317 @@
+<AuditFile xmlns="urn:OECD:StandardAuditFile-Tax:PT_1.01_01">
+    <Header>
+        <AuditFileVersion>1.01_01</AuditFileVersion>
+        <CompanyID>Nr-Conservatoria/123 123123123</CompanyID>
+        <TaxRegistrationNumber>123456789</TaxRegistrationNumber>
+        <TaxAccountingBasis>I</TaxAccountingBasis>
+        <CompanyName>Empresa de teste S.A.</CompanyName>
+        <BusinessName>Empresa de testes</BusinessName>
+        <CompanyAddress>
+            <AddressDetail>Avenida das Demonstrações, lote 1 Piso 1</AddressDetail>
+            <City>Parque das Demonstrações</City>
+            <PostalCode>4100-615</PostalCode>
+            <Country>PT</Country>
+        </CompanyAddress>
+        <FiscalYear>2008</FiscalYear>
+        <StartDate>2001-01-01</StartDate>
+        <EndDate>2007-12-31</EndDate>
+        <CurrencyCode>EUR</CurrencyCode>
+        <DateCreated>2007-09-28</DateCreated>
+        <TaxEntity>Sede</TaxEntity>
+        <ProductCompanyTaxID>123456789</ProductCompanyTaxID>
+        <SoftwareCertificateNumber>0</SoftwareCertificateNumber>
+        <ProductID>Gestão sadsad sadfsd/Sage sd fsd</ProductID>
+        <ProductVersion>07.01.0004</ProductVersion>
+        <HeaderComment>Comentários ao SAFT exportado</HeaderComment>
+        <Telephone>211234567</Telephone>
+        <Fax>211234567</Fax>
+        <Email>teste@maria.com</Email>
+        <Website>www.mariatestes.com</Website>
+    </Header>
+    <MasterFiles>
+        <GeneralLedger>
+            <AccountID>22</AccountID>
+            <AccountDescription>Fornecedores</AccountDescription>
+            <OpeningDebitBalance>0</OpeningDebitBalance>
+            <OpeningCreditBalance>0</OpeningCreditBalance>
+        </GeneralLedger>
+        <GeneralLedger>
+            <AccountID>221</AccountID>
+            <AccountDescription>Fornecedores c/c</AccountDescription>
+            <OpeningDebitBalance>0</OpeningDebitBalance>
+            <OpeningCreditBalance>0</OpeningCreditBalance>
+        </GeneralLedger>
+        <GeneralLedger>
+            <AccountID>24</AccountID>
+            <AccountDescription>Estado e Outros Entes Públicos</AccountDescription>
+            <OpeningDebitBalance>0</OpeningDebitBalance>
+            <OpeningCreditBalance>0</OpeningCreditBalance>
+        </GeneralLedger>
+        <GeneralLedger>
+            <AccountID>31</AccountID>
+            <AccountDescription>Compras</AccountDescription>
+            <OpeningDebitBalance>0</OpeningDebitBalance>
+            <OpeningCreditBalance>0</OpeningCreditBalance>
+        </GeneralLedger>
+        <Supplier>
+            <SupplierID>502145698</SupplierID>
+            <AccountID>22983983</AccountID>
+            <SupplierTaxID>502145698</SupplierTaxID>
+            <CompanyName>InforEstúdio, lda</CompanyName>
+            <BillingAddress>
+                <AddressDetail>Desconhecido</AddressDetail>
+                <City>Desconhecido</City>
+                <PostalCode>Desconhecido</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Supplier>
+        <Customer>
+            <CustomerID>C1</CustomerID>
+            <AccountID>Desconhecido</AccountID>
+            <CustomerTaxID>122222222</CustomerTaxID>
+            <CompanyName>Azimute, Lda çãáà €</CompanyName>
+            <Contact>Carlos Antunes</Contact>
+            <BillingAddress>
+                <AddressDetail>Av.Afonso III - 245 - Loja A</AddressDetail>
+                <City>Alto de São João</City>
+                <PostalCode>1400-000</PostalCode>
+                <Country>Desconhecido</Country>
+            </BillingAddress>
+            <Telephone>219521430</Telephone>
+            <Fax>219521455</Fax>
+            <Email>geral@azimute.pt</Email>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Customer>
+        <Customer>
+            <CustomerID>C2</CustomerID>
+            <AccountID>122</AccountID>
+            <CustomerTaxID>987654321</CustomerTaxID>
+            <CompanyName>Alcatifar, Lda</CompanyName>
+            <Contact>Rui Silva</Contact>
+            <BillingAddress>
+                <AddressDetail>Estrada de Benfica 205 -A</AddressDetail>
+                <City>Benfica</City>
+                <PostalCode>1500-000</PostalCode>
+                <Country>PT</Country>
+            </BillingAddress>
+            <Telephone>217602525</Telephone>
+            <Fax>217602255</Fax>
+            <SelfBillingIndicator>0</SelfBillingIndicator>
+        </Customer>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>P1</ProductCode>
+            <ProductGroup>3 Outros</ProductGroup>
+            <ProductDescription>Canetas</ProductDescription>
+            <ProductNumberCode>OT Canetas</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>P2</ProductCode>
+            <ProductGroup>1 Hardware</ProductGroup>
+            <ProductDescription>Impressora Laser Jet 5P</ProductDescription>
+            <ProductNumberCode>5609999000043</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>PR 720C</ProductCode>
+            <ProductGroup>1 Hardware</ProductGroup>
+            <ProductDescription>Impressora Jet 720C</ProductDescription>
+            <ProductNumberCode>5609999000067</ProductNumberCode>
+        </Product>
+        <TaxTable>
+            <TaxTableEntry>
+                <TaxType>IS</TaxType>
+                <TaxCountryRegion>PT</TaxCountryRegion>
+                <TaxCode>3.2.1.2</TaxCode>
+                <Description>Imposto de selo Tabela x</Description>
+                <TaxAmount>1000</TaxAmount>
+            </TaxTableEntry>
+            <TaxTableEntry>
+                <TaxType>IVA</TaxType>
+                <TaxCountryRegion>PT</TaxCountryRegion>
+                <TaxCode>NOR</TaxCode>
+                <Description>Iva Continente Normal</Description>
+                <TaxPercentage>20</TaxPercentage>
+            </TaxTableEntry>
+        </TaxTable>
+    </MasterFiles>
+    <GeneralLedgerEntries>
+        <NumberOfEntries>1</NumberOfEntries>
+        <TotalDebit>1512.5</TotalDebit>
+        <TotalCredit>1512.5</TotalCredit>
+        <Journal>
+            <JournalID>A</JournalID>
+            <Description>Compras - Continente</Description>
+            <Transaction>
+                <TransactionID>2007-01-10 12345 123422</TransactionID>
+                <Period>1</Period>
+                <TransactionDate>2007-01-02</TransactionDate>
+                <SourceID>1</SourceID>
+                <Description>Mercadorias c/IVA Dedutivel</Description>
+                <DocArchivalNumber>1</DocArchivalNumber>
+                <TransactionType>N</TransactionType>
+                <GLPostingDate>2007-09-28T16:20:45</GLPostingDate>
+                <SupplierID>502145698</SupplierID>
+                <Line>
+                    <RecordID>1</RecordID>
+                    <AccountID>31</AccountID>
+                    <SourceDocumentID>Fact._568</SourceDocumentID>
+                    <SystemEntryDate>2007-01-01T23:00:00</SystemEntryDate>
+                    <Description>Compras</Description>
+                    <DebitAmount>1250</DebitAmount>
+                </Line>
+                <Line>
+                    <RecordID>2</RecordID>
+                    <AccountID>24</AccountID>
+                    <SourceDocumentID>Fact._568</SourceDocumentID>
+                    <SystemEntryDate>2007-01-01T23:00:00</SystemEntryDate>
+                    <Description>Estado e Outros Entes Públicos</Description>
+                    <DebitAmount>262.5</DebitAmount>
+                </Line>
+                <Line>
+                    <RecordID>3</RecordID>
+                    <AccountID>221</AccountID>
+                    <SourceDocumentID>Fact._568</SourceDocumentID>
+                    <SystemEntryDate>2007-01-01T23:00:00</SystemEntryDate>
+                    <Description>Fornecedores c/c</Description>
+                    <CreditAmount>1512.5</CreditAmount>
+                </Line>
+            </Transaction>
+        </Journal>
+        <Journal>
+            <JournalID>B</JournalID>
+            <Description>Compras - Continente</Description>
+            <Transaction>
+                <TransactionID>2007-09-28 32423423 23423423423</TransactionID>
+                <Period>1</Period>
+                <TransactionDate>2007-01-02</TransactionDate>
+                <SourceID>1</SourceID>
+                <Description>Mercadorias c/IVA Dedutivel</Description>
+                <DocArchivalNumber>1</DocArchivalNumber>
+                <TransactionType>N</TransactionType>
+                <GLPostingDate>2007-09-28T16:20:45</GLPostingDate>
+                <SupplierID>502145698</SupplierID>
+                <Line>
+                    <RecordID>1</RecordID>
+                    <AccountID>31</AccountID>
+                    <SourceDocumentID>Fact._568</SourceDocumentID>
+                    <SystemEntryDate>2007-01-01T23:00:00</SystemEntryDate>
+                    <Description>Compras</Description>
+                    <DebitAmount>1250</DebitAmount>
+                </Line>
+                <Line>
+                    <RecordID>2</RecordID>
+                    <AccountID>24</AccountID>
+                    <SourceDocumentID>Fact._568</SourceDocumentID>
+                    <SystemEntryDate>2007-01-01T23:00:00</SystemEntryDate>
+                    <Description>Estado e Outros Entes Públicos</Description>
+                    <DebitAmount>262.5</DebitAmount>
+                </Line>
+                <Line>
+                    <RecordID>3</RecordID>
+                    <AccountID>221</AccountID>
+                    <SourceDocumentID>Fact._568</SourceDocumentID>
+                    <SystemEntryDate>2007-01-01T23:00:00</SystemEntryDate>
+                    <Description>Fornecedores c/c</Description>
+                    <CreditAmount>1512.5</CreditAmount>
+                </Line>
+            </Transaction>
+        </Journal>
+    </GeneralLedgerEntries>
+    <SourceDocuments>
+        <SalesInvoices>
+            <NumberOfEntries>2</NumberOfEntries>
+            <TotalDebit>0</TotalDebit>
+            <TotalCredit>615.29</TotalCredit>
+            <Invoice>
+                <InvoiceNo>NF 1/1</InvoiceNo>
+                <InvoiceStatus>N</InvoiceStatus>
+                <Hash>0</Hash>
+                <Period>1</Period>
+                <InvoiceDate>2007-01-24</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SelfBillingIndicator>0</SelfBillingIndicator>
+                <SystemEntryDate>2007-01-24T15:37:50</SystemEntryDate>
+                <TransactionID>2007-01-24 32423423 23423423423</TransactionID>
+                <CustomerID>C2</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>P1</ProductCode>
+                    <ProductDescription>Impressora Laser Jet 5P</ProductDescription>
+                    <Quantity>1</Quantity>
+                    <UnitOfMeasure>Unid</UnitOfMeasure>
+                    <UnitPrice>482.59</UnitPrice>
+                    <TaxPointDate>2007-01-24</TaxPointDate>
+                    <Description>Impressora Laser Jet 5P</Description>
+                    <CreditAmount>482.59</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>NOR</TaxCode>
+                        <TaxPercentage>21</TaxPercentage>
+                    </Tax>
+                    <SettlementAmount>0</SettlementAmount>
+                </Line>
+                <Line>
+                    <LineNumber>2</LineNumber>
+                    <ProductCode>P1</ProductCode>
+                    <ProductDescription>Impressora Jet 720C</ProductDescription>
+                    <Quantity>1</Quantity>
+                    <UnitOfMeasure>Unid</UnitOfMeasure>
+                    <UnitPrice>130</UnitPrice>
+                    <TaxPointDate>2007-01-24</TaxPointDate>
+                    <Description>Impressora Jet 720C</Description>
+                    <CreditAmount>130</CreditAmount>
+                    <Tax>
+                        <TaxType>IVA</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>NOR</TaxCode>
+                        <TaxPercentage>21</TaxPercentage>
+                    </Tax>
+                    <SettlementAmount>0</SettlementAmount>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>128.64</TaxPayable>
+                    <NetTotal>612.59</NetTotal>
+                    <GrossTotal>741.23</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+            <Invoice>
+                <InvoiceNo>NF 1/2</InvoiceNo>
+                <InvoiceStatus>N</InvoiceStatus>
+                <Hash>1232</Hash>
+                <Period>9</Period>
+                <InvoiceDate>2007-09-28</InvoiceDate>
+                <InvoiceType>FT</InvoiceType>
+                <SelfBillingIndicator>0</SelfBillingIndicator>
+                <SystemEntryDate>2007-09-28T15:31:21</SystemEntryDate>
+                <CustomerID>C1</CustomerID>
+                <Line>
+                    <LineNumber>1</LineNumber>
+                    <ProductCode>P2</ProductCode>
+                    <ProductDescription>Canetas</ProductDescription>
+                    <Quantity>2</Quantity>
+                    <UnitOfMeasure>Unid</UnitOfMeasure>
+                    <UnitPrice>1.35</UnitPrice>
+                    <TaxPointDate>2007-09-28</TaxPointDate>
+                    <Description>Canetas</Description>
+                    <CreditAmount>2.7</CreditAmount>
+                    <Tax>
+                        <TaxType>IS</TaxType>
+                        <TaxCountryRegion>PT</TaxCountryRegion>
+                        <TaxCode>2.1.1</TaxCode>
+                        <TaxPercentage>21</TaxPercentage>
+                    </Tax>
+                    <SettlementAmount>0</SettlementAmount>
+                </Line>
+                <DocumentTotals>
+                    <TaxPayable>.57</TaxPayable>
+                    <NetTotal>2.7</NetTotal>
+                    <GrossTotal>3.27</GrossTotal>
+                </DocumentTotals>
+            </Invoice>
+        </SalesInvoices>
+    </SourceDocuments>
+</AuditFile>

@@ -22,13 +22,10 @@ app.use(function (req, res, next) {
 // error handler
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
-  res.locals.message = err.message
-  res.locals.error = req.app.get('env') === 'development' ? err : {}
-
-  // render the error page
   const statusCode = err.status | 500
-  console.log(err)
-  res.status(statusCode).json({statusCode})
+  const message = err.message | {}
+  console.log('xxxxxxxxxxx', err)
+  res.status(statusCode).json({message: err.message, statusCode})
 })
 
 module.exports = app

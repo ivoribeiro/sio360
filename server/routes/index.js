@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const xmlParser = require('xml2json')
 const fs = require('fs')
+const Journal = require('../logic/journal')
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -68,11 +69,19 @@ router.get('/company/suplliers/:supplierId', function (req, res, next) {
   res.json(bySupplier)
 })
 
-router.get('/company/transactions', function (req, res, next) {
-  const xml = fs.readFileSync('./saft.xml', 'utf8')
-  const result = xmlParser.toJson(xml)
-  const {AuditFile: {GeneralLedgerEntries: {Journal: {Transaction}}}} = JSON.parse(result)
-  res.json(Transaction)
+router.get('/company/journals', function (req, res, next) {
+  const journals = Journal.journals()
+  res.json(journals)
+})
+
+router.get('/company/journals/:journalId', function (req, res, next) {
+  const journal = Journal.journal(req.params.journalId)
+  res.json(journal)
+})
+
+router.get('/company/journals/:journalId/transactions', function (req, res, next) {
+  const transactions = Journal.journalTransactions(req.params.journalId)
+  res.json(transactions)
 })
 
 module.exports = router

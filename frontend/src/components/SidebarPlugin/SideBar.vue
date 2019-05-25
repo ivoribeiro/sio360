@@ -47,7 +47,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "Vue MD"
+      default: "SIO 360"
     },
     backgroundImage: {
       type: String,
@@ -55,7 +55,7 @@ export default {
     },
     imgLogo: {
       type: String,
-      default: require("@/assets/img/vue-logo.png")
+      default: require("@/assets/img/faces/company.png")
     },
     activeColor: {
       type: String,

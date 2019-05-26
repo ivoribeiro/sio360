@@ -4,12 +4,13 @@
   "description": "To run the server: 1- cd server 2- npm i 3- npm start",
   "main": "index.js",
   "scripts": {
-    "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi ",
+    "postinstall": "npm-run-all -p build:frontend build:server",
     "start": "npm-run-all -p start:frontend start:server",
     "start:frontend": "node ./frontend/server.js",
     "start:server": "node ./server/bin/www",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd frontend && npm i"
+    "build:frontend": "cd frontend && npm i",
+    "build:server": "cd server && npm i"
   },
   "repository": {
     "type": "git",

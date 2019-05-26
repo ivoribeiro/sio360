@@ -2,35 +2,32 @@
 const fs = require('fs')
 const xmlParser = require('xml2json')
 const Moment = require('moment')
+const path = require('path')
+const saft = path.join(__dirname.substring(0, __dirname.lastIndexOf('/')), 'saft.xml')
 
 const journals = () => {
-  const xml = fs.readFileSync('./saft.xml', 'utf8')
+  const xml = fs.readFileSync(saft, 'utf8')
   const result = xmlParser.toJson(xml)
   const {AuditFile: {GeneralLedgerEntries: {Journal}}} = JSON.parse(result)
-  const remapped = Journal.map((journal) => {
+  return Journal.map((journal) => {
     if (Array.isArray(journal.Transaction)) {
-      const orderedTransaction = journal.Transaction.sort((a, b) => {
-        const compare = new Moment(a.TransactionDate).format('YYYYMMDD') - new Moment(b.TransactionDate).format('YYYYMMDD')
-        return compare
+      journal.Transaction = journal.Transaction.sort((a, b) => {
+        return new Moment(a.TransactionDate).format('YYYYMMDD') - new Moment(b.TransactionDate).format('YYYYMMDD')
       })
-      journal.Transaction = orderedTransaction
     }
     return journal
   })
-  return remapped
 }
 
 const journal = (journalId) => {
   const result = this.journals()
-  const byJournal = result.filter((journal) => {
+  return result.filter((journal) => {
     return journal.JournalID === journalId
   })
-  return byJournal
 }
 
 const journalTransactions = (journalId) => {
-  const result = this.journal(journalId)
-  return result
+  return this.journal(journalId)
 }
 
 module.exports.journals = journals

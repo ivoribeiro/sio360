@@ -51,7 +51,7 @@ export default {
     }
   },
   mounted () {
-    axios.get('http://127.0.0.1:3000/company').then(response => {
+    axios.get(process.env.VUE_APP_API_URL + '/company').then(response => {
       this.TaxRegistrationNumber = response.data.TaxRegistrationNumber
       this.TaxAccountingBasis = response.data.TaxAccountingBasis
       this.CompanyName = response.data.CompanyName

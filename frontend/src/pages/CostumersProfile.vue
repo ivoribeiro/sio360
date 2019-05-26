@@ -32,7 +32,7 @@ export default {
     }
   },
   mounted () {
-    axios.get('http://127.0.0.1:3000/company/customers').then(response => {
+    axios.get(process.env.VUE_APP_API_URL + '/company/customers').then(response => {
       this.costumers = response.data
     })
   }

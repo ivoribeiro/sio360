@@ -4,8 +4,8 @@
   "description": "To run the server: 1- cd server 2- npm i 3- npm start",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm-run-all -p build:frontend build:server",
-    "start": "npm-run-all -p start:frontend start:server",
+    "postinstall": "if test \"$TYPE\" = \"server\" ; then npm run build:server ; else then npm run build:frontend fi ",
+    "start": "if test \"$TYPE\" = \"server\" ; then npm run start:server ; else npm run start:frontend fi",
     "start:frontend": "node ./frontend/server.js",
     "start:server": "node ./server/bin/www",
     "test": "echo \"Error: no test specified\" && exit 1",

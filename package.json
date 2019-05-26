@@ -1,0 +1,25 @@
+{
+  "name": "sio360",
+  "version": "1.0.0",
+  "description": "To run the server: 1- cd server 2- npm i 3- npm start",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi ",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivoribeiro/sio360.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivoribeiro/sio360/issues"
+  },
+  "homepage": "https://github.com/ivoribeiro/sio360#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "serve-static": "^1.14.1"
+  }
+}

@@ -1,12 +1,23 @@
 'use strict'
 const fs = require('fs')
 const xmlParser = require('xml2json')
+const Moment = require('moment')
 
 const journals = () => {
   const xml = fs.readFileSync('./saft.xml', 'utf8')
   const result = xmlParser.toJson(xml)
   const {AuditFile: {GeneralLedgerEntries: {Journal}}} = JSON.parse(result)
-  return Journal
+  const remapped = Journal.map((journal) => {
+    if (Array.isArray(journal.Transaction)) {
+      const orderedTransaction = journal.Transaction.sort((a, b) => {
+        const compare = new Moment(a.TransactionDate).format('YYYYMMDD') - new Moment(b.TransactionDate).format('YYYYMMDD')
+        return compare
+      })
+      journal.Transaction = orderedTransaction
+    }
+    return journal
+  })
+  return remapped
 }
 
 const journal = (journalId) => {

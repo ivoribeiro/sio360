@@ -2,12 +2,13 @@ import DashboardLayout from '@/pages/Layout/DashboardLayout.vue'
 
 import Dashboard from '@/pages/Dashboard.vue'
 import CompanyProfile from '@/pages/CompanyProfile.vue'
+import CompanyCostumers from '@/pages/CostumersProfile.vue'
+import CompanyAccounts  from '@/pages/Accounts.vue'
 import JournalList from '@/pages/JournalList.vue'
 import Typography from '@/pages/Typography.vue'
 import Icons from '@/pages/Icons.vue'
 import Maps from '@/pages/Maps.vue'
 import Notifications from '@/pages/Notifications.vue'
-import UpgradeToPRO from '@/pages/UpgradeToPRO.vue'
 
 const routes = [
   {
@@ -24,6 +25,16 @@ const routes = [
         path: 'company',
         name: 'Company Profile',
         component: CompanyProfile
+      },
+      {
+        path: 'costumers',
+        name: 'Company Costumers',
+        component: CompanyCostumers
+      },
+      {
+        path: 'accounts',
+        name: 'Company Accounts',
+        component: CompanyAccounts
       },
       {
         path: 'journalList',
@@ -52,11 +63,6 @@ const routes = [
         path: 'notifications',
         name: 'Notifications',
         component: Notifications
-      },
-      {
-        path: 'upgrade',
-        name: 'Upgrade to PRO',
-        component: UpgradeToPRO
       }
     ]
   }

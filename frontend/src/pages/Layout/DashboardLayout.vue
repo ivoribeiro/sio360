@@ -12,6 +12,14 @@
                 <md-icon>business_center</md-icon>
                 <p>About</p>
             </sidebar-link>
+            <sidebar-link to="/costumers">
+                <md-icon>favorite</md-icon>
+                <p>Costumers</p>
+            </sidebar-link>
+            <sidebar-link to="/accounts">
+                <md-icon>account_balance</md-icon>
+                <p>Accounts</p>
+            </sidebar-link>
             <sidebar-link to="/journalList">
                 <md-icon>content_paste</md-icon>
                 <p>Transactions</p>

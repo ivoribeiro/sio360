@@ -8,7 +8,7 @@
     "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi ",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd frontend && npm i && cd .. && cd server  && cd npm i"
+    "build": "cd frontend && npm i"
   },
   "repository": {
     "type": "git",

@@ -4,10 +4,11 @@
   "description": "To run the server: 1- cd server 2- npm i 3- npm start",
   "main": "index.js",
   "scripts": {
+    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build",
     "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi ",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd frontend && npm run build"
+    "build": "cd frontend && npm i && cd .. && cd server  && cd npm i"
   },
   "repository": {
     "type": "git",

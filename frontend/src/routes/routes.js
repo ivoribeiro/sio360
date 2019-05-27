@@ -2,7 +2,7 @@ import DashboardLayout from '@/pages/Layout/DashboardLayout.vue'
 
 import Dashboard from '@/pages/Dashboard.vue'
 import CompanyProfile from '@/pages/CompanyProfile.vue'
-import CompanyCostumers from '@/pages/CostumersProfile.vue'
+import CompanyCustomers from '@/pages/CustomersProfile.vue'
 import CompanyAccounts  from '@/pages/Accounts.vue'
 import JournalList from '@/pages/JournalList.vue'
 import Typography from '@/pages/Typography.vue'
@@ -27,9 +27,9 @@ const routes = [
         component: CompanyProfile
       },
       {
-        path: 'costumers',
-        name: 'Company Costumers',
-        component: CompanyCostumers
+        path: 'customers',
+        name: 'Company Customers',
+        component: CompanyCustomers
       },
       {
         path: 'accounts',

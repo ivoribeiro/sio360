@@ -12,9 +12,9 @@
                 <md-icon>business_center</md-icon>
                 <p>About</p>
             </sidebar-link>
-            <sidebar-link to="/costumers">
+            <sidebar-link to="/customers">
                 <md-icon>favorite</md-icon>
-                <p>Costumers</p>
+                <p>Customers</p>
             </sidebar-link>
             <sidebar-link to="/accounts">
                 <md-icon>account_balance</md-icon>

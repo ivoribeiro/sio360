@@ -28,7 +28,7 @@
                 <md-icon>kitchen</md-icon>
                 <p>Stock</p>
             </sidebar-link>
-            <sidebar-link to="/maps">
+            <sidebar-link v-if="maps" to="/maps">
                 <md-icon>location_on</md-icon>
                 <p>Maps</p>
             </sidebar-link>

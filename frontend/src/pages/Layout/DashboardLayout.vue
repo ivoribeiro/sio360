@@ -1,54 +1,54 @@
 <template>
-    <div class="wrapper" :class="{ 'nav-open': $sidebar.showSidebar }">
-        <notifications></notifications>
+  <div class="wrapper" :class="{ 'nav-open': $sidebar.showSidebar }">
+    <notifications></notifications>
 
-        <side-bar>
-            <mobile-menu slot="content"></mobile-menu>
-            <sidebar-link to="/dashboard">
-                <md-icon>dashboard</md-icon>
-                <p>Dashboard</p>
-            </sidebar-link>
-            <sidebar-link to="/company">
-                <md-icon>business_center</md-icon>
-                <p>About</p>
-            </sidebar-link>
-            <sidebar-link to="/customers">
-                <md-icon>favorite</md-icon>
-                <p>Customers</p>
-            </sidebar-link>
-            <sidebar-link to="/accounts">
-                <md-icon>account_balance</md-icon>
-                <p>Accounts</p>
-            </sidebar-link>
-            <sidebar-link to="/journalList">
-                <md-icon>content_paste</md-icon>
-                <p>Transactions</p>
-            </sidebar-link>
-            <sidebar-link to="/typography">
-                <md-icon>kitchen</md-icon>
-                <p>Stock</p>
-            </sidebar-link>
-            <sidebar-link v-if="maps" to="/maps">
-                <md-icon>location_on</md-icon>
-                <p>Maps</p>
-            </sidebar-link>
-        </side-bar>
+    <side-bar>
+      <mobile-menu slot="content"></mobile-menu>
+      <sidebar-link to="/dashboard">
+        <md-icon>dashboard</md-icon>
+        <p>Dashboard</p>
+      </sidebar-link>
+      <sidebar-link to="/company">
+        <md-icon>business_center</md-icon>
+        <p>About</p>
+      </sidebar-link>
+      <sidebar-link to="/customers">
+        <md-icon>favorite</md-icon>
+        <p>Customers</p>
+      </sidebar-link>
+      <sidebar-link to="/accounts">
+        <md-icon>account_balance</md-icon>
+        <p>Accounts</p>
+      </sidebar-link>
+      <sidebar-link to="/journalList">
+        <md-icon>content_paste</md-icon>
+        <p>Transactions</p>
+      </sidebar-link>
+      <sidebar-link to="/typography">
+        <md-icon>kitchen</md-icon>
+        <p>Stock</p>
+      </sidebar-link>
+      <sidebar-link v-if="maps" to="/maps">
+        <md-icon>location_on</md-icon>
+        <p>Maps</p>
+      </sidebar-link>
+    </side-bar>
 
-        <div class="main-panel">
-            <top-navbar></top-navbar>
+    <div class="main-panel">
+      <top-navbar></top-navbar>
 
-            <dashboard-content></dashboard-content>
+      <dashboard-content></dashboard-content>
 
-            <content-footer v-if="!$route.meta.hideFooter"></content-footer>
-        </div>
+      <content-footer v-if="!$route.meta.hideFooter"></content-footer>
     </div>
+  </div>
 </template>
 <style lang="scss"></style>
 <script>
-import TopNavbar from './TopNavbar.vue'
-import ContentFooter from './ContentFooter.vue'
-import DashboardContent from './Content.vue'
-import MobileMenu from '@/pages/Layout/MobileMenu.vue'
+import TopNavbar from "./TopNavbar.vue";
+import ContentFooter from "./ContentFooter.vue";
+import DashboardContent from "./Content.vue";
+import MobileMenu from "@/pages/Layout/MobileMenu.vue";
 
 export default {
   components: {
@@ -57,5 +57,5 @@ export default {
     ContentFooter,
     MobileMenu
   }
-}
+};
 </script>

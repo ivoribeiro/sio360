@@ -85,4 +85,9 @@ router.get('/company/journals/:journalId/transactions', function (req, res, next
   res.json(transactions)
 })
 
+router.get('/company/sales', function (req, res, next) {
+  const transactions = Journal.journalTransactions('003')
+  res.json(transactions[0])
+})
+
 module.exports = router

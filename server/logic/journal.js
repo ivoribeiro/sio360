@@ -8,7 +8,7 @@ const saft = path.join(__dirname.substring(0, __dirname.lastIndexOf('/')), 'saft
 const journals = () => {
   const xml = fs.readFileSync(saft, 'utf8')
   const result = xmlParser.toJson(xml)
-  const {AuditFile: {GeneralLedgerEntries: {Journal}}} = JSON.parse(result)
+  const { AuditFile: { GeneralLedgerEntries: { Journal } } } = JSON.parse(result)
   return Journal.map((journal) => {
     if (Array.isArray(journal.Transaction)) {
       journal.Transaction = journal.Transaction.sort((a, b) => {

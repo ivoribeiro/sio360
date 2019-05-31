@@ -24,6 +24,10 @@
                 <md-icon>content_paste</md-icon>
                 <p>Transactions</p>
             </sidebar-link>
+            <sidebar-link to="/sales">
+                <md-icon>attach_money</md-icon>
+                <p>Sales</p>
+            </sidebar-link>
             <sidebar-link to="/suppliers">
                 <md-icon>directions_boat</md-icon>
                 <p>Suppliers</p>

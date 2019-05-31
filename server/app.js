@@ -10,7 +10,7 @@ const app = express()
 app.use(cors())
 app.use(logger('dev'))
 app.use(express.json())
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({ extended: false }))
 
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
@@ -24,9 +24,8 @@ app.use(function (req, res, next) {
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   const statusCode = err.status | 500
-  const message = err.message | {}
   console.log('xxxxxxxxxxx', err)
-  res.status(statusCode).json({message: err.message, statusCode})
+  res.status(statusCode).json({ message: err.message, statusCode })
 })
 
 module.exports = app

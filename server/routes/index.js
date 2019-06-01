@@ -3,6 +3,7 @@ const router = express.Router()
 const xmlParser = require('xml2json')
 const fs = require('fs')
 const Journal = require('../logic/journal')
+const Sales = require('../logic/sales')
 const path = require('path')
 const saft = path.join(__dirname.substring(0, __dirname.lastIndexOf('/')), 'saft.xml')
 /* GET home page. */
@@ -15,21 +16,21 @@ router.get('/', function (req, res, next) {
 router.get('/company', function (req, res, next) {
   const xml = fs.readFileSync(saft, 'utf8')
   const result = xmlParser.toJson(xml)
-  const {AuditFile: {Header}} = JSON.parse(result)
+  const { AuditFile: { Header } } = JSON.parse(result)
   res.json(Header)
 })
 
 router.get('/company/accounts', function (req, res, next) {
   const xml = fs.readFileSync(saft, 'utf8')
   const result = xmlParser.toJson(xml)
-  const {AuditFile: {MasterFiles: {GeneralLedgerAccounts: {Account}}}} = JSON.parse(result)
+  const { AuditFile: { MasterFiles: { GeneralLedgerAccounts: { Account } } } } = JSON.parse(result)
   res.json(Account)
 })
 
 router.get('/company/accounts/:accountId', function (req, res, next) {
   const xml = fs.readFileSync(saft, 'utf8')
   const result = xmlParser.toJson(xml)
-  const {AuditFile: {MasterFiles: {GeneralLedgerAccounts: {Account}}}} = JSON.parse(result)
+  const { AuditFile: { MasterFiles: { GeneralLedgerAccounts: { Account } } } } = JSON.parse(result)
   const byAccount = Account.filter((account) => {
     return account.AccountID === req.params.accountId
   })
@@ -39,14 +40,14 @@ router.get('/company/accounts/:accountId', function (req, res, next) {
 router.get('/company/customers', function (req, res, next) {
   const xml = fs.readFileSync(saft, 'utf8')
   const result = xmlParser.toJson(xml)
-  const {AuditFile: {MasterFiles: {Customer}}} = JSON.parse(result)
+  const { AuditFile: { MasterFiles: { Customer } } } = JSON.parse(result)
   res.json(Customer)
 })
 
 router.get('/company/customers/:clientId', function (req, res, next) {
   const xml = fs.readFileSync(saft, 'utf8')
   const result = xmlParser.toJson(xml)
-  const {AuditFile: {MasterFiles: {Customer}}} = JSON.parse(result)
+  const { AuditFile: { MasterFiles: { Customer } } } = JSON.parse(result)
   const byClient = Customer.filter((account) => {
     return account.CustomerID === req.params.clientId
   })
@@ -56,14 +57,14 @@ router.get('/company/customers/:clientId', function (req, res, next) {
 router.get('/company/suppliers', function (req, res, next) {
   const xml = fs.readFileSync(saft, 'utf8')
   const result = xmlParser.toJson(xml)
-  const {AuditFile: {MasterFiles: {Supplier}}} = JSON.parse(result)
+  const { AuditFile: { MasterFiles: { Supplier } } } = JSON.parse(result)
   res.json(Supplier)
 })
 
 router.get('/company/suplliers/:supplierId', function (req, res, next) {
   const xml = fs.readFileSync(saft, 'utf8')
   const result = xmlParser.toJson(xml)
-  const {AuditFile: {MasterFiles: {Supllier}}} = JSON.parse(result)
+  const { AuditFile: { MasterFiles: { Supllier } } } = JSON.parse(result)
   const bySupplier = Supllier.filter((supplier) => {
     return supplier.SupplierID === req.params.supplierId
   })
@@ -86,8 +87,18 @@ router.get('/company/journals/:journalId/transactions', function (req, res, next
 })
 
 router.get('/company/sales', function (req, res, next) {
-  const transactions = Journal.journalTransactions('003')
-  res.json(transactions[0])
+  const sales = Sales.sales(Journal)
+  res.json(sales)
+})
+
+router.get('/company/sales/byMonth', function (req, res, next) {
+  const sales = Sales.salesByMonth(Journal)
+  res.json(sales)
+})
+
+router.get('/company/sales/byCustomer', function (req, res, next) {
+  const sales = Sales.salesByCustomer(Journal)
+  res.json(sales)
 })
 
 module.exports = router

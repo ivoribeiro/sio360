@@ -28,7 +28,7 @@ export default {
     },
     title: {
       type: String,
-      default: "Card description"
+      default: "Cherry Computer is a new company that provides expertise in computer sells and support. We aim the higher education market, including colleges, universities, and professional educational institutions."
     },
     icon: {
       type: String,
@@ -36,7 +36,7 @@ export default {
     },
     label: {
       type: String,
-      default: "CEO"
+      default: "Cherry Computer, Inc."
     }
   },
   data() {

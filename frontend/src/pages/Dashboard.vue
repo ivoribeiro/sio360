@@ -321,23 +321,10 @@ export default {
         this.customers = response.data
       })
 
-    axios.get(process.env.VUE_APP_API_URL + '/company/sales')
+    axios.get(process.env.VUE_APP_API_URL + '/company/sales/byMonth')
       .then(response => {
-        const sales = response.data
-        const monthSet = new Set()
-        let salesPerMonth = {}
-        const months = sales.Transaction.map((sale) => {
-          const date = moment(sale.TransactionDate, 'YYYY/MM/DD')
-          const month = date.format('M')
-          monthSet.add(month)
-          if (salesPerMonth[month] === undefined) {
-            salesPerMonth[month] = 0
-          }
-          salesPerMonth[month] = salesPerMonth[month] + 1
-          return month
-        })
-        this.monthlySalesChart.data.series = [Object.values(salesPerMonth)]
-        this.monthlySalesChart.data.labels = Array.from(monthSet)
+        this.monthlySalesChart.data.series = [response.data.sales]
+        this.monthlySalesChart.data.labels = response.data.months
       })
   }
 }

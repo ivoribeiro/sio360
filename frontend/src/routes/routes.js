@@ -2,15 +2,14 @@ import DashboardLayout from '@/pages/Layout/DashboardLayout.vue'
 
 import Dashboard from '@/pages/Dashboard.vue'
 import CompanyProfile from '@/pages/CompanyProfile.vue'
-import CompanyCustomers from '@/pages/CustomersProfile.vue'
-import CompanySuppliers from '@/pages/CompanySuppliers.vue'
+import CompanyCustomers from '@/pages/Customers.vue'
+import CompanySuppliers from '@/pages/Suppliers.vue'
 import CompanyAccounts from '@/pages/Accounts.vue'
-import JournalList from '@/pages/JournalList.vue'
+import Journals from '@/pages/Journals.vue'
 import Typography from '@/pages/Typography.vue'
-import Icons from '@/pages/Icons.vue'
 import Maps from '@/pages/Maps.vue'
 import Notifications from '@/pages/Notifications.vue'
-import CompanySales from '@/pages/CompanySales.vue'
+import CompanySales from '@/pages/Sales.vue'
 
 const routes = [
   {
@@ -49,19 +48,14 @@ const routes = [
         component: CompanySuppliers
       },
       {
-        path: 'journalList',
-        name: 'Journal List',
-        component: JournalList
+        path: 'journals',
+        name: 'Journals',
+        component: Journals
       },
       {
         path: 'typography',
         name: 'Typography',
         component: Typography
-      },
-      {
-        path: 'icons',
-        name: 'Icons',
-        component: Icons
       },
       {
         path: 'maps',

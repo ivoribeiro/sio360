@@ -20,7 +20,7 @@
                 <md-icon>account_balance</md-icon>
                 <p>Accounts</p>
             </sidebar-link>
-            <sidebar-link to="/journalList">
+            <sidebar-link to="/journals">
                 <md-icon>content_paste</md-icon>
                 <p>Transactions</p>
             </sidebar-link>
@@ -64,6 +64,10 @@ export default {
     DashboardContent,
     ContentFooter,
     MobileMenu
+  }, data () {
+    return {
+      maps: false
+    }
   }
 }
 </script>

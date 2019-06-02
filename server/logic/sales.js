@@ -20,7 +20,7 @@ const salesByMonth = (Journals) => {
     salesPerMonth[month] = salesPerMonth[month] + 1
     return month
   })
-  return {sales: Object.values(salesPerMonth), months: Array.from(monthSet)}
+  return { sales: Object.values(salesPerMonth), months: Array.from(monthSet) }
 }
 
 const salesByCustomer = (Journals) => {
@@ -33,7 +33,12 @@ const salesByCustomer = (Journals) => {
     salesPerCustomer[sale.CustomerID] = salesPerCustomer[sale.CustomerID] + 1
     return sale
   })
-  return {sales: Object.values(salesPerCustomer), customers: Object.keys(salesPerCustomer)}
+  return { sales: Object.values(salesPerCustomer), customers: Object.keys(salesPerCustomer) }
+}
+
+const salesStats = (Journals, Accounts) => {
+  const sales = this.sales(Journals)
+
 }
 
 module.exports.sales = sales

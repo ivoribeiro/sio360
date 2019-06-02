@@ -7,12 +7,14 @@
                     class="md-layout-item md-medium-size-100 md-size-100"
             >
                 <edit-company-form
+                        :title="supplier.SupplierID"
+                        :description="supplier.CompanyName"
                         :Telephone="supplier.Telephone"
                         :Fax="supplier.Fax"
                         :CompanyName="supplier.CompanyName"
                         :Email="supplier.Email"
                         :CompanyAddress="supplier.BillingAddress"
-                        :TaxRegistrationNumber="supplier.TaxRegistrationNumber"
+                        :TaxRegistrationNumber="supplier.SupplierTaxID"
                         :StartDate="supplier.StartDate"
                         :EndDate="supplier.EndDate"
                         :FiscalYear="supplier.FiscalYear"

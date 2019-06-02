@@ -4,6 +4,9 @@ const xmlParser = require('xml2json')
 const fs = require('fs')
 const Journal = require('../logic/journal')
 const Sales = require('../logic/sales')
+const Accounts = require('../logic/accounts')
+const Customers = require('../logic/customers')
+const Suppliers = require('../logic/suppliers')
 const path = require('path')
 const saft = path.join(__dirname.substring(0, __dirname.lastIndexOf('/')), 'saft.xml')
 /* GET home page. */
@@ -21,54 +24,33 @@ router.get('/company', function (req, res, next) {
 })
 
 router.get('/company/accounts', function (req, res, next) {
-  const xml = fs.readFileSync(saft, 'utf8')
-  const result = xmlParser.toJson(xml)
-  const { AuditFile: { MasterFiles: { GeneralLedgerAccounts: { Account } } } } = JSON.parse(result)
-  res.json(Account)
+  const accounts = Accounts.accounts()
+  res.json(accounts)
 })
 
 router.get('/company/accounts/:accountId', function (req, res, next) {
-  const xml = fs.readFileSync(saft, 'utf8')
-  const result = xmlParser.toJson(xml)
-  const { AuditFile: { MasterFiles: { GeneralLedgerAccounts: { Account } } } } = JSON.parse(result)
-  const byAccount = Account.filter((account) => {
-    return account.AccountID === req.params.accountId
-  })
+  const byAccount = Accounts.byAccount(req.params.accountId)
   res.json(byAccount)
 })
 
 router.get('/company/customers', function (req, res, next) {
-  const xml = fs.readFileSync(saft, 'utf8')
-  const result = xmlParser.toJson(xml)
-  const { AuditFile: { MasterFiles: { Customer } } } = JSON.parse(result)
-  res.json(Customer)
+  const customers = Customers.customers()
+  res.json(customers)
 })
 
-router.get('/company/customers/:clientId', function (req, res, next) {
-  const xml = fs.readFileSync(saft, 'utf8')
-  const result = xmlParser.toJson(xml)
-  const { AuditFile: { MasterFiles: { Customer } } } = JSON.parse(result)
-  const byClient = Customer.filter((account) => {
-    return account.CustomerID === req.params.clientId
-  })
-  res.json(byClient)
+router.get('/company/customers/:customerId', function (req, res, next) {
+  const customer = Customers.byId(req.params.customerId)
+  res.json(customer)
 })
 
 router.get('/company/suppliers', function (req, res, next) {
-  const xml = fs.readFileSync(saft, 'utf8')
-  const result = xmlParser.toJson(xml)
-  const { AuditFile: { MasterFiles: { Supplier } } } = JSON.parse(result)
-  res.json(Supplier)
+  const suppliers = Suppliers.suppliers()
+  res.json(suppliers)
 })
 
-router.get('/company/suplliers/:supplierId', function (req, res, next) {
-  const xml = fs.readFileSync(saft, 'utf8')
-  const result = xmlParser.toJson(xml)
-  const { AuditFile: { MasterFiles: { Supllier } } } = JSON.parse(result)
-  const bySupplier = Supllier.filter((supplier) => {
-    return supplier.SupplierID === req.params.supplierId
-  })
-  res.json(bySupplier)
+router.get('/company/suppliers/:supplierId', function (req, res, next) {
+  const supplier = Suppliers.byId(req.params.supplierId)
+  res.json(supplier)
 })
 
 router.get('/company/journals', function (req, res, next) {

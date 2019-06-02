@@ -8,6 +8,12 @@
                 <md-table-cell md-label="Type"
                 >{{ item.TransactionType }}
                 </md-table-cell>
+                <md-table-cell md-label="Debit Lines"
+                >{{ Array.isArray(item.Lines.CreditLine)?item.Lines.CreditLine.length:1 }}
+                </md-table-cell>
+                <md-table-cell md-label="Credit Lines"
+                > {{ Array.isArray(item.Lines.DebitLines)?item.Lines.DebitLine.length:1 }}
+                </md-table-cell>
                 <md-table-cell md-label="Date"
                 >{{ item.TransactionDate }}
                 </md-table-cell>
@@ -16,12 +22,29 @@
         <md-dialog :md-active.sync="classicModal">
             <md-dialog-title>Lines</md-dialog-title>
             <md-dialog-content>
-                <md-tabs md-dynamic-height>
+                <md-tabs md-alignment="fixed">
                     <md-tab md-label="Credit">
-                        <md-table style="color: black" :table-header-color="tableHeaderColor">
+                        <md-table :table-header-color="tableHeaderColor">
                             <md-table-row slot="md-table-row">
                                 <md-table-cell md-label="CreditAmount">
-                                    {{TransactionLines.CreditLine}}
+                                    <md-table v-model="TransactionLines.DebitLine"
+                                              :table-header-color="tableHeaderColor">
+                                        <md-table-row slot="md-table-row"
+                                                      slot-scope="{ item }">
+                                            <md-table-cell md-label="Description">
+                                                {{ item.Description }}
+                                            </md-table-cell>
+                                            <md-table-cell md-label="Amount">
+                                                {{ item.DebitAmount }}
+                                            </md-table-cell>
+                                            <md-table-cell md-label="AccountID">
+                                                {{ item.AccountID }}
+                                            </md-table-cell>
+                                            <md-table-cell md-label="Date">
+                                                {{ item.SystemEntryDate }}
+                                            </md-table-cell>
+                                        </md-table-row>
+                                    </md-table>
                                 </md-table-cell>
                             </md-table-row>
                         </md-table>
@@ -30,7 +53,24 @@
                         <md-table :table-header-color="tableHeaderColor">
                             <md-table-row slot="md-table-row">
                                 <md-table-cell md-label="CreditAmount">
-                                    {{TransactionLines.DebitLine}}
+                                    <md-table v-model="TransactionLines.CreditLine"
+                                              :table-header-color="tableHeaderColor">
+                                        <md-table-row slot="md-table-row"
+                                                      slot-scope="{ item }">
+                                            <md-table-cell md-label="Description">
+                                                {{ item.Description }}
+                                            </md-table-cell>
+                                            <md-table-cell md-label="Amount">
+                                                {{ item.CreditAmount }}
+                                            </md-table-cell>
+                                            <md-table-cell md-label="AccountID">
+                                                {{ item.AccountID }}
+                                            </md-table-cell>
+                                            <md-table-cell md-label="Date">
+                                                {{ item.SystemEntryDate }}
+                                            </md-table-cell>
+                                        </md-table-row>
+                                    </md-table>
                                 </md-table-cell>
                             </md-table-row>
                         </md-table>
@@ -78,8 +118,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-    .md-dialog {
-        max-width: 768px;
+<style lang="scss">
+    .md-tabs {
+        margin-bottom: 24px;
+    }
+
+    .md-tabs-content table thead {
+        display: contents !important;
     }
 </style>

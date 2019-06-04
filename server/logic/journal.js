@@ -8,12 +8,17 @@ const saft = path.join(__dirname.substring(0, __dirname.lastIndexOf('/')), 'saft
 const journals = () => {
   const xml = fs.readFileSync(saft, 'utf8')
   const result = xmlParser.toJson(xml)
+  console.log(result)
   const { AuditFile: { GeneralLedgerEntries: { Journal } } } = JSON.parse(result)
-  return Journal.map((journal) => {
-    if (!Array.isArray(journal.Transaction)) {
-      journal.Transaction = [journal.Transaction]
+  let journal = Journal
+  if (!Array.isArray(journal)) {
+    journal = [journal]
+  }
+  return journal.map((item) => {
+    if (!Array.isArray(item.Transaction)) {
+      item.Transaction = [item.Transaction]
     }
-    journal.Transaction = journal.Transaction.map((transaction) => {
+    item.Transaction = item.Transaction.map((transaction) => {
       if (!Array.isArray(transaction.Lines.CreditLine)) {
         transaction.Lines.CreditLine = [transaction.Lines.CreditLine]
       }
@@ -22,11 +27,11 @@ const journals = () => {
       }
       return transaction
     })
-    journal.Transaction = journal.Transaction.sort((a, b) => {
+    item.Transaction = item.Transaction.sort((a, b) => {
       return new Moment(a.TransactionDate).format('YYYYMMDD') - new Moment(b.TransactionDate).format('YYYYMMDD')
     })
 
-    return journal
+    return item
   })
 }
 

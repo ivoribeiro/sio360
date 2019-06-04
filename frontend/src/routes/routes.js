@@ -5,6 +5,7 @@ import CompanyProfile from '@/pages/CompanyProfile.vue'
 import CompanyCustomers from '@/pages/Customers.vue'
 import CompanySuppliers from '@/pages/Suppliers.vue'
 import CompanyAccounts from '@/pages/Accounts.vue'
+import Products from '@/pages/Products.vue'
 import Journals from '@/pages/Journals.vue'
 import Typography from '@/pages/Typography.vue'
 import Maps from '@/pages/Maps.vue'
@@ -62,6 +63,10 @@ const routes = [
         path: 'typography',
         name: 'Typography',
         component: Typography
+      }, {
+        path: 'products',
+        name: 'Products',
+        component: Products
       },
       {
         path: 'maps',

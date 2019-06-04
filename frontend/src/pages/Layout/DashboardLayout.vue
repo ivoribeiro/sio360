@@ -36,6 +36,10 @@
                 <md-icon>directions_boat</md-icon>
                 <p>Suppliers</p>
             </sidebar-link>
+            <sidebar-link to="/products">
+                <md-icon>computer</md-icon>
+                <p>Products</p>
+            </sidebar-link>
             <sidebar-link to="/typography">
                 <md-icon>kitchen</md-icon>
                 <p>Stock</p>

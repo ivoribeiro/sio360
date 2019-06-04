@@ -8,6 +8,7 @@ const Purchases = require('../logic/purchases')
 const Accounts = require('../logic/accounts')
 const Customers = require('../logic/customers')
 const Suppliers = require('../logic/suppliers')
+const Products = require('../logic/products')
 const path = require('path')
 const saft = path.join(__dirname.substring(0, __dirname.lastIndexOf('/')), 'saft.xml')
 /* GET home page. */
@@ -67,6 +68,11 @@ router.get('/company/journals/:journalId', function (req, res, next) {
 router.get('/company/journals/:journalId/transactions', function (req, res, next) {
   const transactions = Journal.journalTransactions(req.params.journalId)
   res.json(transactions)
+})
+
+router.get('/company/products', function (req, res, next) {
+  const products = Products.products(Journal)
+  res.json(products)
 })
 
 router.get('/company/sales', function (req, res, next) {

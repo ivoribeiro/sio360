@@ -48,8 +48,9 @@
                             </drop-down>
                         </md-list-item>
 
-                        <md-list-item href="#/user">
+                        <md-list-item>
                             <i class="material-icons">person</i>
+                            <b>Admin</b>
                             <p class="hidden-lg hidden-md">Profile</p>
                         </md-list-item>
                     </md-list>

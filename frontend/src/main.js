@@ -14,6 +14,8 @@ import Notifications from "./components/NotificationPlugin";
 
 // MaterialDashboard plugin
 import MaterialDashboard from "./material-dashboard";
+import VueApexCharts from 'vue-apexcharts'
+
 
 import Chartist from "chartist";
 
@@ -25,6 +27,7 @@ const router = new VueRouter({
 
 Vue.prototype.$Chartist = Chartist;
 
+Vue.component('apexchart', VueApexCharts)
 Vue.use(VueRouter);
 Vue.use(MaterialDashboard);
 Vue.use(GlobalComponents);

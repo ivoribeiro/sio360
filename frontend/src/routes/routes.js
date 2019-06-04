@@ -10,6 +10,7 @@ import Typography from '@/pages/Typography.vue'
 import Maps from '@/pages/Maps.vue'
 import Notifications from '@/pages/Notifications.vue'
 import CompanySales from '@/pages/Sales.vue'
+import Purchases from '@/pages/Purchases.vue'
 
 const routes = [
   {
@@ -26,6 +27,11 @@ const routes = [
         path: 'company',
         name: 'Company Profile',
         component: CompanyProfile
+      },
+      {
+        path: 'purchases',
+        name: 'Company Purchases',
+        component: Purchases
       },
       {
         path: 'sales',

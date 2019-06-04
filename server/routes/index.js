@@ -4,6 +4,7 @@ const xmlParser = require('xml2json')
 const fs = require('fs')
 const Journal = require('../logic/journal')
 const Sales = require('../logic/sales')
+const Purchases = require('../logic/purchases')
 const Accounts = require('../logic/accounts')
 const Customers = require('../logic/customers')
 const Suppliers = require('../logic/suppliers')
@@ -71,6 +72,21 @@ router.get('/company/journals/:journalId/transactions', function (req, res, next
 router.get('/company/sales', function (req, res, next) {
   const sales = Sales.sales(Journal)
   res.json(sales)
+})
+
+router.get('/company/sales/stats', function (req, res, next) {
+  const sales = Sales.salesStats(Journal)
+  res.json(sales)
+})
+
+router.get('/company/purchases', function (req, res, next) {
+  const purchases = Purchases.purchases(Journal)
+  res.json(purchases)
+})
+
+router.get('/company/purchases/stats', function (req, res, next) {
+  const stats = Purchases.stats(Journal)
+  res.json(stats)
 })
 
 router.get('/company/sales/byMonth', function (req, res, next) {

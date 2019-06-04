@@ -2,14 +2,12 @@
     <div class="content">
         <div class="md-layout">
             <div
-                    class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33"
-            >
+                    class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33">
                 <chart-card
                         :chart-data="monthlySalesChart.data"
                         :chart-options="monthlySalesChart.options"
                         :chart-type="'Line'"
-                        data-background-color="blue"
-                >
+                        data-background-color="blue">
                     <template slot="content">
                         <h4 class="title">Monthly Sales</h4>
                         <p class="category">
@@ -53,9 +51,7 @@
                     </template>
                 </chart-card>
             </div>
-            <div
-                    class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33"
-            >
+            <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33">
                 <chart-card
                         :chart-data="dataCompletedTasksChart.data"
                         :chart-options="dataCompletedTasksChart.options"
@@ -77,9 +73,7 @@
                     </template>
                 </chart-card>
             </div>
-            <div
-                    class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
-            >
+            <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
                 <stats-card data-background-color="green">
                     <template slot="header">
                         <md-icon>store</md-icon>
@@ -98,9 +92,7 @@
                     </template>
                 </stats-card>
             </div>
-            <div
-                    class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
-            >
+            <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
                 <stats-card data-background-color="orange">
                     <template slot="header">
                         <md-icon>content_copy</md-icon>
@@ -121,9 +113,7 @@
                     </template>
                 </stats-card>
             </div>
-            <div
-                    class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
-            >
+            <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
                 <stats-card data-background-color="red">
                     <template slot="header">
                         <md-icon>info_outline</md-icon>
@@ -142,9 +132,7 @@
                     </template>
                 </stats-card>
             </div>
-            <div
-                    class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
-            >
+            <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
                 <stats-card data-background-color="blue">
                     <template slot="header">
                         <i class="fab fa-twitter"></i>
@@ -163,9 +151,7 @@
                     </template>
                 </stats-card>
             </div>
-            <div
-                    class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50"
-            >
+            <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50">
                 <md-card>
                     <md-card-header data-background-color="orange">
                         <h4 class="title">Employees Stats</h4>
@@ -176,27 +162,32 @@
                     </md-card-content>
                 </md-card>
             </div>
-            <div
-                    class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50"
-            >
-                <nav-tabs-card>
-                    <template slot="content">
-                        <span class="md-nav-tabs-title">Tasks:</span>
-                        <md-tabs md-sync-route class="md-success" md-alignment="left">
-                            <md-tab id="tab-home" md-label="Bugs" md-icon="bug_report">
-                                <nav-tabs-table></nav-tabs-table>
-                            </md-tab>
-
-                            <md-tab id="tab-pages" md-label="Website" md-icon="code">
-                                <nav-tabs-table></nav-tabs-table>
-                            </md-tab>
-
-                            <md-tab id="tab-posts" md-label="server" md-icon="cloud">
-                                <nav-tabs-table></nav-tabs-table>
-                            </md-tab>
-                        </md-tabs>
+            <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50">
+                <pie-chart :series="[salesTotal,purchasesTotal]" :width=600 data-background-color="blue">
+                    <template slot="header">
+                        <md-card-header
+                                data-background-color="blue">
+                            <h4 class="title">Revenue Stats</h4>
+                            <p class="category">Pie chart with actual data</p>
+                        </md-card-header>
                     </template>
-                </nav-tabs-card>
+                    <template slot="content">
+                        <h4 class="title">Monthly Sales</h4>
+                        <p class="category">
+              <span class="text-success"
+              ><i class="fas fa-long-arrow-alt-up"></i> 55%
+              </span>
+                            increase in today sales.
+                        </p>
+                    </template>
+
+                    <template slot="footer">
+                        <div class="stats">
+                            <md-icon>access_time</md-icon>
+                            updated 4 minutes ago
+                        </div>
+                    </template>
+                </pie-chart>
             </div>
         </div>
     </div>
@@ -208,13 +199,15 @@ import {
   ChartCard,
   NavTabsCard,
   NavTabsTable,
-  OrderedTable
+  OrderedTable,
+  PieChart
 } from '@/components'
 import axios from 'axios'
 import moment from 'moment'
 
 export default {
   components: {
+    PieChart,
     StatsCard,
     ChartCard,
     NavTabsCard,
@@ -223,6 +216,8 @@ export default {
   },
   data () {
     return {
+      purchasesTotal: 0,
+      salesTotal: 0,
       customers: [],
       suppliers: [],
       monthlySalesChart: {
@@ -315,6 +310,14 @@ export default {
     axios.get(process.env.VUE_APP_API_URL + '/company/suppliers')
       .then(response => {
         this.suppliers = response.data
+      })
+    axios.get(process.env.VUE_APP_API_URL + '/company/sales/stats')
+      .then(response => {
+        this.salesTotal = response.data.salesTotal
+      })
+    axios.get(process.env.VUE_APP_API_URL + '/company/purchases/stats')
+      .then(response => {
+        this.purchasesTotal = response.data.purchasesTotal
       })
     axios.get(process.env.VUE_APP_API_URL + '/company/customers')
       .then(response => {

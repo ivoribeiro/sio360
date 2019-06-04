@@ -36,11 +36,21 @@ const salesByCustomer = (Journals) => {
   return { sales: Object.values(salesPerCustomer), customers: Object.keys(salesPerCustomer) }
 }
 
-const salesStats = (Journals, Accounts) => {
+const salesStats = (Journals) => {
   const sales = this.sales(Journals)
+  let salesTotal = 0
+  sales.Transaction.map((sale) => {
+    sale.Lines.CreditLine.map((line) => {
+      if (line.CreditAmount) {
+        salesTotal = parseInt(line.CreditAmount) + parseInt(salesTotal)
+      }
+    })
+  })
 
+  return { salesTotal }
 }
 
 module.exports.sales = sales
 module.exports.salesByMonth = salesByMonth
 module.exports.salesByCustomer = salesByCustomer
+module.exports.salesStats = salesStats

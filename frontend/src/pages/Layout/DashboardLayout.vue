@@ -28,6 +28,10 @@
                 <md-icon>attach_money</md-icon>
                 <p>Sales</p>
             </sidebar-link>
+            <sidebar-link to="/purchases">
+                <md-icon>shopping_cart</md-icon>
+                <p>Purchases</p>
+            </sidebar-link>
             <sidebar-link to="/suppliers">
                 <md-icon>directions_boat</md-icon>
                 <p>Suppliers</p>

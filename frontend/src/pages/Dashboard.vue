@@ -3,75 +3,95 @@
         <div class="md-layout">
             <div
                     class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33">
-                <chart-card
-                        :chart-data="monthlySalesChart.data"
-                        :chart-options="monthlySalesChart.options"
-                        :chart-type="'Line'"
-                        data-background-color="blue">
+                <line-chart title="Sales" :series="monthlySalesChart" :height=300 data-background-color="blue">
+                    <template slot="header">
+                        <md-card-header
+                                data-background-color="blue">
+                            <h4 class="title">Sales Revenue By Month</h4>
+                            <p class="category">Line chart showing sales revenue evolution</p>
+                        </md-card-header>
+                    </template>
                     <template slot="content">
-                        <h4 class="title">Monthly Sales</h4>
+                        <h4 class="title">Indicators</h4>
                         <p class="category">
-              <span class="text-success"
-              ><i class="fas fa-long-arrow-alt-up"></i> 55%
-              </span>
-                            increase in today sales.
+              <span class="text-success"><i class="fas fa-long-arrow-alt-up"></i> {{Math.max.apply(null,monthlySalesChart[0].data)}}
+                                              € (highest value)
+                                </span>
+                            <span class="text-danger">
+              <i class="fas fa-long-arrow-alt-down"></i> {{Math.min.apply(null,monthlySalesChart[0].data)}}
+                            € (lowest value)
+    </span>
                         </p>
                     </template>
-
                     <template slot="footer">
                         <div class="stats">
                             <md-icon>access_time</md-icon>
-                            updated 4 minutes ago
+                            Just Updated
                         </div>
                     </template>
-                </chart-card>
+                </line-chart>
             </div>
             <div
                     class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33"
             >
-                <chart-card
-                        :chart-data="emailsSubscriptionChart.data"
-                        :chart-options="emailsSubscriptionChart.options"
-                        :chart-responsive-options="emailsSubscriptionChart.responsiveOptions"
-                        :chart-type="'Bar'"
-                        data-background-color="red"
-                >
+                <line-chart title="Sales" :series="monthlySalesChart" :height=300 data-background-color="blue">
+                    <template slot="header">
+                        <md-card-header
+                                data-background-color="blue">
+                            <h4 class="title">Sales Revenue By Month</h4>
+                            <p class="category">Line chart showing sales revenue evolution</p>
+                        </md-card-header>
+                    </template>
                     <template slot="content">
-                        <h4 class="title">Email Subscription</h4>
+                        <h4 class="title">Indicators</h4>
                         <p class="category">
-                            Last Campaign Performance
+              <span class="text-success"><i class="fas fa-long-arrow-alt-up"></i> {{Math.max.apply(null,monthlySalesChart[0].data)}}
+                                              € (highest value)
+                                </span>
+                            <span class="text-danger">
+              <i class="fas fa-long-arrow-alt-down"></i> {{Math.min.apply(null,monthlySalesChart[0].data)}}
+                            € (lowest value)
+    </span>
                         </p>
                     </template>
-
                     <template slot="footer">
                         <div class="stats">
                             <md-icon>access_time</md-icon>
-                            updated 10 days ago
+                            Just Updated
                         </div>
                     </template>
-                </chart-card>
+                </line-chart>
+
             </div>
             <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33">
-                <chart-card
-                        :chart-data="dataCompletedTasksChart.data"
-                        :chart-options="dataCompletedTasksChart.options"
-                        :chart-type="'Line'"
-                        data-background-color="green"
-                >
+                <line-chart title="Sales" :series="monthlySalesChart" :height=300 data-background-color="blue">
+                    <template slot="header">
+                        <md-card-header
+                                data-background-color="blue">
+                            <h4 class="title">Sales Revenue By Month</h4>
+                            <p class="category">Line chart showing sales revenue evolution</p>
+                        </md-card-header>
+                    </template>
                     <template slot="content">
-                        <h4 class="title">Completed Tasks</h4>
+                        <h4 class="title">Indicators</h4>
                         <p class="category">
-                            Last Campaign Performance
+              <span class="text-success"><i class="fas fa-long-arrow-alt-up"></i> {{Math.max.apply(null,monthlySalesChart[0].data)}}
+                                              € (highest value)
+                                </span>
+                            <span class="text-danger">
+              <i class="fas fa-long-arrow-alt-down"></i> {{Math.min.apply(null,monthlySalesChart[0].data)}}
+                            € (lowest value)
+    </span>
                         </p>
                     </template>
-
                     <template slot="footer">
                         <div class="stats">
                             <md-icon>access_time</md-icon>
-                            campaign sent 26 minutes ago
+                            Just Updated
                         </div>
                     </template>
-                </chart-card>
+                </line-chart>
+
             </div>
             <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
                 <stats-card data-background-color="green">
@@ -81,13 +101,13 @@
 
                     <template slot="content">
                         <p class="category">Revenue</p>
-                        <h3 class="title">$34,245</h3>
+                        <h3 class="title">€{{salesTotal-purchasesTotal}}</h3>
                     </template>
 
                     <template slot="footer">
                         <div class="stats">
                             <md-icon>date_range</md-icon>
-                            Last 24 Hours
+                            2018
                         </div>
                     </template>
                 </stats-card>
@@ -104,11 +124,10 @@
                             {{this.customers.length}}
                         </h3>
                     </template>
-
                     <template slot="footer">
                         <div class="stats">
-                            <md-icon class="text-danger">warning</md-icon>
-                            <a href="#pablo">Get More Space...</a>
+                            <md-icon class="text-danger">favorite</md-icon>
+                            <a href="#/customers">See who they are</a>
                         </div>
                     </template>
                 </stats-card>
@@ -127,7 +146,7 @@
                     <template slot="footer">
                         <div class="stats">
                             <md-icon>local_offer</md-icon>
-                            Tracked from Github
+                            <a href="#/suppliers">Check them</a>
                         </div>
                     </template>
                 </stats-card>
@@ -154,11 +173,14 @@
             <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50">
                 <md-card>
                     <md-card-header data-background-color="orange">
-                        <h4 class="title">Employees Stats</h4>
-                        <p class="category">New employees on 15th September, 2016</p>
+                        <h4 class="title">Top Sales</h4>
+                        <p class="category">Top 10 Sales in 2018</p>
                     </md-card-header>
                     <md-card-content>
-                        <ordered-table table-header-color="orange"></ordered-table>
+                        <simple-table
+                                :lines="topSales"
+                                table-header-color="orange"
+                        ></simple-table>
                     </md-card-content>
                 </md-card>
             </div>
@@ -167,24 +189,23 @@
                     <template slot="header">
                         <md-card-header
                                 data-background-color="blue">
-                            <h4 class="title">Revenue Stats</h4>
-                            <p class="category">Pie chart with actual data</p>
+                            <h4 class="title">Profit Chart</h4>
+                            <p class="category">Pie chart comparing sales revenue and purchases </p>
                         </md-card-header>
                     </template>
                     <template slot="content">
-                        <h4 class="title">Monthly Sales</h4>
+                        <h4 class="title">ROI Percentage</h4>
                         <p class="category">
               <span class="text-success"
-              ><i class="fas fa-long-arrow-alt-up"></i> 55%
+              ><i class="fas fa-long-arrow-alt-up"></i> {{parseFloat(((salesTotal-purchasesTotal)/purchasesTotal)*100).toFixed(2)}}
               </span>
-                            increase in today sales.
+                            % of ROI between costs with purchases and sales
                         </p>
                     </template>
-
                     <template slot="footer">
                         <div class="stats">
                             <md-icon>access_time</md-icon>
-                            updated 4 minutes ago
+                            Just Updated
                         </div>
                     </template>
                 </pie-chart>
@@ -200,7 +221,9 @@ import {
   NavTabsCard,
   NavTabsTable,
   OrderedTable,
-  PieChart
+  SimpleTable,
+  PieChart,
+  LineChart
 } from '@/components'
 import axios from 'axios'
 import moment from 'moment'
@@ -208,113 +231,45 @@ import moment from 'moment'
 export default {
   components: {
     PieChart,
+    LineChart,
     StatsCard,
     ChartCard,
     NavTabsCard,
     NavTabsTable,
-    OrderedTable
+    OrderedTable,
+    SimpleTable
   },
   data () {
     return {
       purchasesTotal: 0,
+      topSales: [],
       salesTotal: 0,
       customers: [],
       suppliers: [],
-      monthlySalesChart: {
-        data: {
-          labels: [],
-          series: []
-        },
-        options: {
-          lineSmooth: this.$Chartist.Interpolation.cardinal({
-            tension: 0
-          }),
-          low: 0,
-          high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-          chartPadding: {
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0
-          }
-        }
-      },
-      dataCompletedTasksChart: {
-        data: {
-          labels: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
-          series: [[230, 750, 450, 300, 280, 240, 200, 190]]
-        },
-
-        options: {
-          lineSmooth: this.$Chartist.Interpolation.cardinal({
-            tension: 0
-          }),
-          low: 0,
-          high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-          chartPadding: {
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0
-          }
-        }
-      },
-      emailsSubscriptionChart: {
-        data: {
-          labels: [
-            'Ja',
-            'Fe',
-            'Ma',
-            'Ap',
-            'Mai',
-            'Ju',
-            'Jul',
-            'Au',
-            'Se',
-            'Oc',
-            'No',
-            'De'
-          ],
-          series: [[542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]]
-        },
-        options: {
-          axisX: {
-            showGrid: false
-          },
-          low: 0,
-          high: 1000,
-          chartPadding: {
-            top: 0,
-            right: 5,
-            bottom: 0,
-            left: 0
-          }
-        },
-        responsiveOptions: [
-          [
-            'screen and (max-width: 640px)',
-            {
-              seriesBarDistance: 5,
-              axisX: {
-                labelInterpolationFnc: function (value) {
-                  return value[0]
-                }
-              }
-            }
-          ]
-        ]
-      }
+      monthlySalesChart: []
     }
   },
   mounted () {
+    axios.get(process.env.VUE_APP_API_URL + '/company/sales/stats').then(response => {
+      this.salesTotal = response.data.salesTotal
+      this.monthlySalesChart = [{
+        name: 'revenue',
+        data: response.data.salesValueByMonth.sales,
+        categories: response.data.salesValueByMonth.months
+      }]
+
+    })
+    axios
+      .get(process.env.VUE_APP_API_URL + '/company/sales/byRevenue')
+      .then(response => {
+        this.topSales = response.data.Transaction.slice(0, 10)
+      })
+
     axios.get(process.env.VUE_APP_API_URL + '/company/suppliers')
       .then(response => {
         this.suppliers = response.data
       })
-    axios.get(process.env.VUE_APP_API_URL + '/company/sales/stats')
-      .then(response => {
-        this.salesTotal = response.data.salesTotal
-      })
+
     axios.get(process.env.VUE_APP_API_URL + '/company/purchases/stats')
       .then(response => {
         this.purchasesTotal = response.data.purchasesTotal
@@ -324,11 +279,6 @@ export default {
         this.customers = response.data
       })
 
-    axios.get(process.env.VUE_APP_API_URL + '/company/sales/byMonth')
-      .then(response => {
-        this.monthlySalesChart.data.series = [response.data.sales]
-        this.monthlySalesChart.data.labels = response.data.months
-      })
   }
 }
 </script>

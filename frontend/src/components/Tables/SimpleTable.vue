@@ -5,6 +5,9 @@
                 <md-table-cell md-label="Description">
                     {{ item.Description }}
                 </md-table-cell>
+                <md-table-cell v-if="item.salesTotal" md-label="Value ( € )"
+                >{{ item.salesTotal }}
+                </md-table-cell>
                 <md-table-cell md-label="Type"
                 >{{ item.TransactionType }}
                 </md-table-cell>

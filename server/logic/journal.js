@@ -8,7 +8,6 @@ const saft = path.join(__dirname.substring(0, __dirname.lastIndexOf('/')), 'saft
 const journals = () => {
   const xml = fs.readFileSync(saft, 'utf8')
   const result = xmlParser.toJson(xml)
-  console.log(result)
   const { AuditFile: { GeneralLedgerEntries: { Journal } } } = JSON.parse(result)
   let journal = Journal
   if (!Array.isArray(journal)) {

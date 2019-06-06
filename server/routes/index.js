@@ -80,6 +80,11 @@ router.get('/company/sales', function (req, res, next) {
   res.json(sales)
 })
 
+router.get('/company/sales/byRevenue', function (req, res, next) {
+  const sales = Sales.salesByRevenue(Journal)
+  res.json(sales)
+})
+
 router.get('/company/sales/stats', function (req, res, next) {
   const sales = Sales.salesStats(Journal)
   res.json(sales)

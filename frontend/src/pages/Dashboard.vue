@@ -2,8 +2,8 @@
     <div class="content">
         <div class="md-layout">
             <div
-                    class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33">
-                <line-chart title="Sales" :series="monthlySalesChart" :height=300 data-background-color="blue">
+                    class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50">
+                <line-chart title="Sales" :series="monthlySalesChart" :height=350 data-background-color="blue">
                     <template slot="header">
                         <md-card-header
                                 data-background-color="blue">
@@ -31,25 +31,24 @@
                     </template>
                 </line-chart>
             </div>
-            <div
-                    class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33"
-            >
-                <line-chart title="Sales" :series="monthlySalesChart" :height=300 data-background-color="blue">
+            <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50">
+                <bar-chart title="Sales" :categories="customerSalesChart[0].categories" :series="customerSalesChart"
+                           :height=350 data-background-color="blue">
                     <template slot="header">
                         <md-card-header
-                                data-background-color="blue">
-                            <h4 class="title">Sales Revenue By Month</h4>
-                            <p class="category">Line chart showing sales revenue evolution</p>
+                                data-background-color="green">
+                            <h4 class="title">Sales Revenue By Customer</h4>
+                            <p class="category">Bar chart showing sales revenue by customer</p>
                         </md-card-header>
                     </template>
                     <template slot="content">
                         <h4 class="title">Indicators</h4>
                         <p class="category">
-              <span class="text-success"><i class="fas fa-long-arrow-alt-up"></i> {{Math.max.apply(null,monthlySalesChart[0].data)}}
+              <span class="text-success"><i class="fas fa-long-arrow-alt-up"></i> {{Math.max.apply(null,customerSalesChart[0].data)}}
                                               € (highest value)
                                 </span>
                             <span class="text-danger">
-              <i class="fas fa-long-arrow-alt-down"></i> {{Math.min.apply(null,monthlySalesChart[0].data)}}
+              <i class="fas fa-long-arrow-alt-down"></i> {{Math.min.apply(null,customerSalesChart[0].data)}}
                             € (lowest value)
     </span>
                         </p>
@@ -60,38 +59,7 @@
                             Just Updated
                         </div>
                     </template>
-                </line-chart>
-
-            </div>
-            <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33">
-                <line-chart title="Sales" :series="monthlySalesChart" :height=300 data-background-color="blue">
-                    <template slot="header">
-                        <md-card-header
-                                data-background-color="blue">
-                            <h4 class="title">Sales Revenue By Month</h4>
-                            <p class="category">Line chart showing sales revenue evolution</p>
-                        </md-card-header>
-                    </template>
-                    <template slot="content">
-                        <h4 class="title">Indicators</h4>
-                        <p class="category">
-              <span class="text-success"><i class="fas fa-long-arrow-alt-up"></i> {{Math.max.apply(null,monthlySalesChart[0].data)}}
-                                              € (highest value)
-                                </span>
-                            <span class="text-danger">
-              <i class="fas fa-long-arrow-alt-down"></i> {{Math.min.apply(null,monthlySalesChart[0].data)}}
-                            € (lowest value)
-    </span>
-                        </p>
-                    </template>
-                    <template slot="footer">
-                        <div class="stats">
-                            <md-icon>access_time</md-icon>
-                            Just Updated
-                        </div>
-                    </template>
-                </line-chart>
-
+                </bar-chart>
             </div>
             <div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
                 <stats-card data-background-color="green">
@@ -223,7 +191,8 @@ import {
   OrderedTable,
   SimpleTable,
   PieChart,
-  LineChart
+  LineChart,
+  BarChart
 } from '@/components'
 import axios from 'axios'
 import moment from 'moment'
@@ -232,6 +201,7 @@ export default {
   components: {
     PieChart,
     LineChart,
+    BarChart,
     StatsCard,
     ChartCard,
     NavTabsCard,
@@ -246,7 +216,8 @@ export default {
       salesTotal: 0,
       customers: [],
       suppliers: [],
-      monthlySalesChart: []
+      monthlySalesChart: [],
+      customerSalesChart: []
     }
   },
   mounted () {
@@ -256,6 +227,11 @@ export default {
         name: 'revenue',
         data: response.data.salesValueByMonth.sales,
         categories: response.data.salesValueByMonth.months
+      }]
+      this.customerSalesChart = [{
+        name: 'revenue',
+        data: response.data.salesValueByCustomer.sales,
+        categories: response.data.salesValueByCustomer.customers
       }]
 
     })

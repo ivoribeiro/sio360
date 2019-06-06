@@ -61,6 +61,9 @@ export default {
         xaxis: {
           type: 'category',
           categories: this.categories,
+          title: {
+            text: 'Months',
+          },
         },
         title: {
           text: this.title,
@@ -99,6 +102,12 @@ export default {
           title: {
             text: 'Sales revenue',
           },
+        }, tooltip: {
+          y: {
+            formatter: function (val) {
+              return '€ ' + val
+            }
+          }
         }
       }
     }

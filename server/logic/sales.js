@@ -56,6 +56,19 @@ const salesValueByMonth = (Journals) => {
   return { sales: Object.values(salesPerMonth), months: Array.from(monthSet) }
 }
 
+const salesValueByCustomer = (Journals) => {
+  const sales = this.salesByRevenue(Journals)
+  let salesPerCustomer = {}
+  sales.Transaction.map((sale) => {
+    if (salesPerCustomer[sale.CustomerID] === undefined) {
+      salesPerCustomer[sale.CustomerID] = 0
+    }
+    salesPerCustomer[sale.CustomerID] = salesPerCustomer[sale.CustomerID] + sale.salesTotal
+    return sale
+  })
+  return { sales: Object.values(salesPerCustomer), customers: Object.keys(salesPerCustomer) }
+}
+
 const salesByCustomer = (Journals) => {
   const sales = this.sales(Journals)
   let salesPerCustomer = {}
@@ -80,7 +93,8 @@ const salesStats = (Journals) => {
     })
   })
   const byValue = salesValueByMonth(Journals)
-  return { salesTotal, salesValueByMonth: byValue }
+  const byCustomer = salesValueByCustomer(Journals)
+  return { salesTotal, salesValueByMonth: byValue, salesValueByCustomer: byCustomer }
 }
 
 module.exports.sales = sales

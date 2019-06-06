@@ -9,6 +9,7 @@ import OrderedTable from './Tables/OrderedTable.vue'
 import SimpleTable from './Tables/SimpleTable.vue'
 import PieChart from './PieChart.vue'
 import LineChart from './LineChart.vue'
+import BarChart from './BarChart.vue'
 
 export {
   ChartCard,
@@ -18,5 +19,6 @@ export {
   OrderedTable,
   SimpleTable,
   PieChart,
-  LineChart
+  LineChart,
+  BarChart
 }

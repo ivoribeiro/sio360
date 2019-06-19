@@ -3,7 +3,7 @@
     <li>
       <md-field>
         <label>Search</label>
-        <md-input v-model="search" type="text"></md-input>
+        <md-input type="text"></md-input>
       </md-field>
     </li>
     <li>

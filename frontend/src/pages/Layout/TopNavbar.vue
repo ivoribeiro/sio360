@@ -16,10 +16,9 @@
                 </md-button>
 
                 <div class="md-collapse">
-                    <div class="md-autocomplete">
+                    <div v-if="search" class="md-autocomplete">
                         <md-autocomplete
                                 class="search"
-                                v-model="selectedEmployee"
                                 :md-options="employees"
                         >
                             <label>Search...</label>
@@ -64,6 +63,7 @@
 export default {
   data () {
     return {
+      search: false,
       hidden: false,
       selectedEmployee: null,
       employees: [

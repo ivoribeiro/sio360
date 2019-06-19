@@ -2,7 +2,7 @@
 const Moment = require('moment')
 
 const sales = (Journals) => {
-  const transactions = Journals.journalTransactions('003')
+  const transactions = Journals.journalTransactions('00022')
   return transactions[0]
 }
 

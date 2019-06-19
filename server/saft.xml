@@ -34,7 +34,7 @@
 			<TaxonomyReference>M</TaxonomyReference>
 			<Account>
 				<AccountID>13</AccountID>
-				<AccountDescription>Outros depositos bancarios</AccountDescription>
+				<AccountDescription>CHY-C/C</AccountDescription>
 				<OpeningDebitBalance>274381.00</OpeningDebitBalance>
 				<OpeningCreditBalance>5000000.00</OpeningCreditBalance>
 				<ClosingDebitBalance>0.00</ClosingDebitBalance>
@@ -43,7 +43,7 @@
 			</Account>
 			<Account>
 				<AccountID>131</AccountID>
-				<AccountDescription>Outros depositos bancarios</AccountDescription>
+				<AccountDescription>CHY-C/C</AccountDescription>
 				<OpeningDebitBalance>274381.00</OpeningDebitBalance>
 				<OpeningCreditBalance>5000000.00</OpeningCreditBalance>
 				<ClosingDebitBalance>0.00</ClosingDebitBalance>
@@ -728,7 +728,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00042 50002</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-01-16</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>VFA N. 4/A</Description>
 				<DocArchivalNumber>50002</DocArchivalNumber>
@@ -761,7 +761,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00042 50003</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-01-30</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>VFA N. 5/A</Description>
 				<DocArchivalNumber>50003</DocArchivalNumber>
@@ -796,7 +796,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00042 50004</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-02-04</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>VFA N. 6/A</Description>
 				<DocArchivalNumber>50004</DocArchivalNumber>
@@ -831,7 +831,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00042 50005</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-04-10</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>VFA N. 7/A</Description>
 				<DocArchivalNumber>50005</DocArchivalNumber>
@@ -864,7 +864,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00042 50006</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-04-22</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>VFA N. 8/A</Description>
 				<DocArchivalNumber>50006</DocArchivalNumber>
@@ -897,7 +897,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00042 50007</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-05-28</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>VFA N. 9/A</Description>
 				<DocArchivalNumber>50007</DocArchivalNumber>
@@ -934,7 +934,7 @@
 				<Transaction>
 				<TransactionID>2019-05-31 00022 50001</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-01-16</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>FA N. 1/A</Description>
 				<DocArchivalNumber>50001</DocArchivalNumber>
@@ -967,7 +967,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00022 50002</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-01-17</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>FA N. 2/A</Description>
 				<DocArchivalNumber>50002</DocArchivalNumber>
@@ -1002,7 +1002,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00022 50003</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-02-01</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>FA N. 3/A</Description>
 				<DocArchivalNumber>50003</DocArchivalNumber>
@@ -1037,7 +1037,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00022 50004</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-02-01</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>FA N. 4/A</Description>
 				<DocArchivalNumber>50004</DocArchivalNumber>
@@ -1070,7 +1070,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00022 50005</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-02-14</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>FA N. 5/A</Description>
 				<DocArchivalNumber>50005</DocArchivalNumber>
@@ -1103,7 +1103,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00022 50006</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-02-26</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>FA N. 6/A</Description>
 				<DocArchivalNumber>50006</DocArchivalNumber>
@@ -1136,7 +1136,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00022 50007</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-03-02</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>FA N. 7/A</Description>
 				<DocArchivalNumber>50007</DocArchivalNumber>
@@ -1173,7 +1173,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00022 50008</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-03-15</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>FA N. 8/A</Description>
 				<DocArchivalNumber>50008</DocArchivalNumber>
@@ -1206,7 +1206,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00022 50009</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-03-20</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>FA N. 9/A</Description>
 				<DocArchivalNumber>50009</DocArchivalNumber>
@@ -1239,7 +1239,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00022 50010</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-03-21</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>FA N. 10/A</Description>
 				<DocArchivalNumber>50010</DocArchivalNumber>
@@ -1272,7 +1272,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00022 50011</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-04-12</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>FA N. 11/A</Description>
 				<DocArchivalNumber>50011</DocArchivalNumber>
@@ -1305,7 +1305,7 @@
 			<Transaction>
 				<TransactionID>2019-05-31 00022 50012</TransactionID>
 				<Period>5</Period>
-				<TransactionDate>2019-05-31</TransactionDate>
+				<TransactionDate>2019-05-13</TransactionDate>
 				<SourceID>estg</SourceID>
 				<Description>FA N. 12/A</Description>
 				<DocArchivalNumber>50012</DocArchivalNumber>

@@ -11,8 +11,10 @@
                         icon="computer"
                         :title="product.ProductDescription">
                     <description>
-                        <b>Closed Debit:</b> {{ product.ProductCode }} <br/>
-                        <b>Opening Credit:</b> {{ product.ProductGroup }} <br/>
+                        <b>Product Code:</b> {{ product.ProductCode }} <br/>
+                        <b>Product Group:</b> {{ product.ProductGroup }} <br/>
+                        <b>Initial Stock:</b> {{ product.InitialStock }} <br/>
+                        <b>Current Stock:</b> {{ product.CurrentStock }} <br/>
                     </description>
                 </company-card>
             </div>

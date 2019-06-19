@@ -34,7 +34,7 @@
 			<TaxonomyReference>M</TaxonomyReference>
 			<Account>
 				<AccountID>13</AccountID>
-				<AccountDescription>Outros dep�sitos banc�rios</AccountDescription>
+				<AccountDescription>Outros depositos bancarios</AccountDescription>
 				<OpeningDebitBalance>274381.00</OpeningDebitBalance>
 				<OpeningCreditBalance>5000000.00</OpeningCreditBalance>
 				<ClosingDebitBalance>0.00</ClosingDebitBalance>
@@ -43,7 +43,7 @@
 			</Account>
 			<Account>
 				<AccountID>131</AccountID>
-				<AccountDescription>Outros dep�sitos banc�rios</AccountDescription>
+				<AccountDescription>Outros depositos bancarios</AccountDescription>
 				<OpeningDebitBalance>274381.00</OpeningDebitBalance>
 				<OpeningCreditBalance>5000000.00</OpeningCreditBalance>
 				<ClosingDebitBalance>0.00</ClosingDebitBalance>
@@ -504,13 +504,6 @@
 			<SelfBillingIndicator>0</SelfBillingIndicator>
 		</Supplier>
 		<Product>
-			<ProductType>O</ProductType>
-			<ProductCode>Especial</ProductCode>
-			<ProductGroup>Sem fam�lia</ProductGroup>
-			<ProductDescription>Linha especial</ProductDescription>
-			<ProductNumberCode>Especial</ProductNumberCode>
-		</Product>
-		<Product>
 			<ProductType>P</ProductType>
 			<ProductCode>M1.1</ProductCode>
 			<ProductGroup>Macbook Pro 13 128GB SSD</ProductGroup>
@@ -622,14 +615,14 @@
 				<TaxType>IVA</TaxType>
 				<TaxCountryRegion>PT</TaxCountryRegion>
 				<TaxCode>INT</TaxCode>
-				<Description>Interm�dia</Description>
+				<Description>Intermedia</Description>
 				<TaxPercentage>12.00</TaxPercentage>
 			</TaxTableEntry>
 			<TaxTableEntry>
 				<TaxType>IVA</TaxType>
 				<TaxCountryRegion>PT</TaxCountryRegion>
 				<TaxCode>INT</TaxCode>
-				<Description>Interm�dia</Description>
+				<Description>Intermedia</Description>
 				<TaxPercentage>13.00</TaxPercentage>
 			</TaxTableEntry>
 			<TaxTableEntry>
@@ -730,14 +723,14 @@
 		<TotalDebit>274381.00</TotalDebit>
 		<TotalCredit>320415.00</TotalCredit>
 		<Journal>
-			<JournalID>00041</JournalID>
+			<JournalID>00042</JournalID>
 			<Description>Compras - MN</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00041 50002</TransactionID>
+				<TransactionID>2019-05-31 00042 50002</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>VFA N� 4/A</Description>
+				<Description>VFA N. 4/A</Description>
 				<DocArchivalNumber>50002</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -752,7 +745,7 @@
 						<AccountID>22130002</AccountID>
 						<SourceDocumentID>VFA A/4</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T16:07:06</SystemEntryDate>
-						<Description>VFA N� 4/A</Description>
+						<Description>VFA N. 4/A</Description>
 						<CreditAmount>67860.00</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -760,21 +753,17 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>VFA A/4</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T16:07:06</SystemEntryDate>
-						<Description>VFA N� 4/A</Description>
+						<Description>VFA N. 4/A</Description>
 						<DebitAmount>67860.00</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00042</JournalID>
-			<Description>Compras - MN</Description>
 			<Transaction>
 				<TransactionID>2019-05-31 00042 50003</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>VFA N� 5/A</Description>
+				<Description>VFA N. 5/A</Description>
 				<DocArchivalNumber>50003</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -791,7 +780,7 @@
 						<AccountID>22110001</AccountID>
 						<SourceDocumentID>VFA A/5</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T16:15:17</SystemEntryDate>
-						<Description>VFA N� 5/A</Description>
+						<Description>VFA N. 5/A</Description>
 						<CreditAmount>21008.40</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -799,21 +788,17 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>VFA A/5</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T16:15:17</SystemEntryDate>
-						<Description>VFA N� 5/A</Description>
+						<Description>VFA N. 5/A</Description>
 						<DebitAmount>21008.40</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00043</JournalID>
-			<Description>Compras - MN</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00043 50004</TransactionID>
+				<TransactionID>2019-05-31 00042 50004</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>VFA N� 6/A</Description>
+				<Description>VFA N. 6/A</Description>
 				<DocArchivalNumber>50004</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -830,7 +815,7 @@
 						<AccountID>22110001</AccountID>
 						<SourceDocumentID>VFA A/6</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T16:19:22</SystemEntryDate>
-						<Description>VFA N� 6/A</Description>
+						<Description>VFA N. 6/A</Description>
 						<CreditAmount>29360.10</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -838,21 +823,17 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>VFA A/6</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T16:19:22</SystemEntryDate>
-						<Description>VFA N� 6/A</Description>
+						<Description>VFA N. 6/A</Description>
 						<DebitAmount>29360.10</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00044</JournalID>
-			<Description>Compras - MN</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00044 50005</TransactionID>
+				<TransactionID>2019-05-31 00042 50005</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>VFA N� 7/A</Description>
+				<Description>VFA N. 7/A</Description>
 				<DocArchivalNumber>50005</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -867,7 +848,7 @@
 						<AccountID>22110001</AccountID>
 						<SourceDocumentID>VFA 7/4</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T16:23:08</SystemEntryDate>
-						<Description>VFA N� 7/A</Description>
+						<Description>VFA N. 7/A</Description>
 						<CreditAmount>60900.00</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -875,21 +856,17 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>VFA A/7</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T16:23:08</SystemEntryDate>
-						<Description>VFA N� 7/A</Description>
+						<Description>VFA N. 7/A</Description>
 						<DebitAmount>60900.00</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00045</JournalID>
-			<Description>Compras - MN</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00045 50006</TransactionID>
+				<TransactionID>2019-05-31 00042 50006</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>VFA N� 8/A</Description>
+				<Description>VFA N. 8/A</Description>
 				<DocArchivalNumber>50006</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -904,7 +881,7 @@
 						<AccountID>22110001</AccountID>
 						<SourceDocumentID>VFA A/8</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T16:33:36</SystemEntryDate>
-						<Description>VFA N� 8/A</Description>
+						<Description>VFA N. 8/A</Description>
 						<CreditAmount>77350.00</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -912,21 +889,17 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>VFA A/8</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T16:33:36</SystemEntryDate>
-						<Description>VFA N� 8/A</Description>
+						<Description>VFA N. 8/A</Description>
 						<DebitAmount>77350.00</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00046</JournalID>
-			<Description>Compras - MN</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00046 50007</TransactionID>
+				<TransactionID>2019-05-31 00042 50007</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>VFA N� 9/A</Description>
+				<Description>VFA N. 9/A</Description>
 				<DocArchivalNumber>50007</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -941,7 +914,7 @@
 						<AccountID>22110001</AccountID>
 						<SourceDocumentID>VFA A/9</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T16:35:02</SystemEntryDate>
-						<Description>VFA N� 9/A</Description>
+						<Description>VFA N. 9/A</Description>
 						<CreditAmount>17902.50</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -949,7 +922,7 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>VFA A/9</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T16:35:02</SystemEntryDate>
-						<Description>VFA N� 9/A</Description>
+						<Description>VFA N. 9/A</Description>
 						<DebitAmount>17902.50</DebitAmount>
 					</DebitLine>
 				</Lines>
@@ -958,12 +931,12 @@
 		<Journal>
 			<JournalID>00022</JournalID>
 			<Description>Vendas - CL</Description>
-			<Transaction>
+				<Transaction>
 				<TransactionID>2019-05-31 00022 50001</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>FA N� 1/A</Description>
+				<Description>FA N. 1/A</Description>
 				<DocArchivalNumber>50001</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -978,7 +951,7 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>FA A/1</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:05:29</SystemEntryDate>
-						<Description>FA N� 1/A</Description>
+						<Description>FA N. 1/A</Description>
 						<CreditAmount>21525.00</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -986,21 +959,17 @@
 						<AccountID>21110007</AccountID>
 						<SourceDocumentID>FA A/1</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:05:29</SystemEntryDate>
-						<Description>FA N� 1/A</Description>
+						<Description>FA N. 1/A</Description>
 						<DebitAmount>21525.00</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00023</JournalID>
-			<Description>Vendas - CL</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00023 50002</TransactionID>
+				<TransactionID>2019-05-31 00022 50002</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>FA N� 2/A</Description>
+				<Description>FA N. 2/A</Description>
 				<DocArchivalNumber>50002</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -1017,7 +986,7 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>FA A/2</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:08:02</SystemEntryDate>
-						<Description>FA N� 2/A</Description>
+						<Description>FA N. 2/A</Description>
 						<CreditAmount>20295.00</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -1025,21 +994,17 @@
 						<AccountID>21110005</AccountID>
 						<SourceDocumentID>FA A/2</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:08:02</SystemEntryDate>
-						<Description>FA N� 2/A</Description>
+						<Description>FA N. 2/A</Description>
 						<DebitAmount>20295.00</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00024</JournalID>
-			<Description>Vendas - CL</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00024 50003</TransactionID>
+				<TransactionID>2019-05-31 00022 50003</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>FA N� 3/A</Description>
+				<Description>FA N. 3/A</Description>
 				<DocArchivalNumber>50003</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -1056,7 +1021,7 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>FA A/3</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:11:13</SystemEntryDate>
-						<Description>FA N� 3/A</Description>
+						<Description>FA N. 3/A</Description>
 						<CreditAmount>27060.00</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -1064,21 +1029,17 @@
 						<AccountID>21110001</AccountID>
 						<SourceDocumentID>FA 3/1</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:11:13</SystemEntryDate>
-						<Description>FA N� 3/A</Description>
+						<Description>FA N. 3/A</Description>
 						<DebitAmount>27060.00</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00025</JournalID>
-			<Description>Vendas - CL</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00025 50004</TransactionID>
+				<TransactionID>2019-05-31 00022 50004</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>FA N� 4/A</Description>
+				<Description>FA N. 4/A</Description>
 				<DocArchivalNumber>50004</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -1093,7 +1054,7 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>FA A/4</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:17:31</SystemEntryDate>
-						<Description>FA N� 4/A</Description>
+						<Description>FA N. 4/A</Description>
 						<CreditAmount>12915.00</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -1101,21 +1062,17 @@
 						<AccountID>21110003</AccountID>
 						<SourceDocumentID>FA A/4</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:17:31</SystemEntryDate>
-						<Description>FA N� 4/A</Description>
+						<Description>FA N. 4/A</Description>
 						<DebitAmount>12915.00</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00026</JournalID>
-			<Description>Vendas - CL</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00026 50005</TransactionID>
+				<TransactionID>2019-05-31 00022 50005</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>FA N� 5/A</Description>
+				<Description>FA N. 5/A</Description>
 				<DocArchivalNumber>50005</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -1130,7 +1087,7 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>FA A/5</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:20:50</SystemEntryDate>
-						<Description>FA N� 5/A</Description>
+						<Description>FA N. 5/A</Description>
 						<CreditAmount>20295.00</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -1138,21 +1095,17 @@
 						<AccountID>21110008</AccountID>
 						<SourceDocumentID>FA A/5</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:20:50</SystemEntryDate>
-						<Description>FA N� 5/A</Description>
+						<Description>FA N. 5/A</Description>
 						<DebitAmount>20295.00</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00027</JournalID>
-			<Description>Vendas - CL</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00027 50006</TransactionID>
+				<TransactionID>2019-05-31 00022 50006</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>FA N� 6/A</Description>
+				<Description>FA N. 6/A</Description>
 				<DocArchivalNumber>50006</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -1167,7 +1120,7 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>FA A/6</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:24:41</SystemEntryDate>
-						<Description>FA N� 6/A</Description>
+						<Description>FA N. 6/A</Description>
 						<CreditAmount>35055.00</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -1175,21 +1128,17 @@
 						<AccountID>21110006</AccountID>
 						<SourceDocumentID>FA A/6</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:24:41</SystemEntryDate>
-						<Description>FA N� 6/A</Description>
+						<Description>FA N. 6/A</Description>
 						<DebitAmount>35055.00</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00028</JournalID>
-			<Description>Vendas - CL</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00028 50007</TransactionID>
+				<TransactionID>2019-05-31 00022 50007</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>FA N� 7/A</Description>
+				<Description>FA N. 7/A</Description>
 				<DocArchivalNumber>50007</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -1208,7 +1157,7 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>FA A/7</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:29:00</SystemEntryDate>
-						<Description>FA N� 7/A</Description>
+						<Description>FA N. 7/A</Description>
 						<CreditAmount>48892.50</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -1216,21 +1165,17 @@
 						<AccountID>21130010</AccountID>
 						<SourceDocumentID>FA A/7</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:29:00</SystemEntryDate>
-						<Description>FA N� 7/A</Description>
+						<Description>FA N. 7/A</Description>
 						<DebitAmount>48892.50</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00029</JournalID>
-			<Description>Vendas - CL</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00029 50008</TransactionID>
+				<TransactionID>2019-05-31 00022 50008</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>FA N� 8/A</Description>
+				<Description>FA N. 8/A</Description>
 				<DocArchivalNumber>50008</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -1245,7 +1190,7 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>FA A/8</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:31:44</SystemEntryDate>
-						<Description>FA N� 8/A</Description>
+						<Description>FA N. 8/A</Description>
 						<CreditAmount>43050.00</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -1253,21 +1198,17 @@
 						<AccountID>21110002</AccountID>
 						<SourceDocumentID>FA A/8</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:31:44</SystemEntryDate>
-						<Description>FA N� 8/A</Description>
+						<Description>FA N. 8/A</Description>
 						<DebitAmount>43050.00</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00030</JournalID>
-			<Description>Vendas - CL</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00030 50009</TransactionID>
+				<TransactionID>2019-05-31 00022 50009</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>FA N� 9/A</Description>
+				<Description>FA N. 9/A</Description>
 				<DocArchivalNumber>50009</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -1282,7 +1223,7 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>FA A/9</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:36:16</SystemEntryDate>
-						<Description>FA N� 9/A</Description>
+						<Description>FA N. 9/A</Description>
 						<CreditAmount>10147.50</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -1290,21 +1231,17 @@
 						<AccountID>21110005</AccountID>
 						<SourceDocumentID>FA A/9</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:36:16</SystemEntryDate>
-						<Description>FA N� 9/A</Description>
+						<Description>FA N. 9/A</Description>
 						<DebitAmount>10147.50</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00031</JournalID>
-			<Description>Vendas - CL</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00031 50010</TransactionID>
+				<TransactionID>2019-05-31 00022 50010</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>FA N� 10/A</Description>
+				<Description>FA N. 10/A</Description>
 				<DocArchivalNumber>50010</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -1319,7 +1256,7 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>FA A/10</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:41:27</SystemEntryDate>
-						<Description>FA N� 10/A</Description>
+						<Description>FA N. 10/A</Description>
 						<CreditAmount>8610.00</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -1327,21 +1264,17 @@
 						<AccountID>21110002</AccountID>
 						<SourceDocumentID>FA A/10</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:41:27</SystemEntryDate>
-						<Description>FA N� 10/A</Description>
+						<Description>FA N. 10/A</Description>
 						<DebitAmount>8610.00</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00032</JournalID>
-			<Description>Vendas - CL</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00032 50011</TransactionID>
+				<TransactionID>2019-05-31 00022 50011</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>FA N� 11/A</Description>
+				<Description>FA N. 11/A</Description>
 				<DocArchivalNumber>50011</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -1356,7 +1289,7 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>FA A/11</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:44:49</SystemEntryDate>
-						<Description>FA N� 11/A</Description>
+						<Description>FA N. 11/A</Description>
 						<CreditAmount>7380.00</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -1364,21 +1297,17 @@
 						<AccountID>21110009</AccountID>
 						<SourceDocumentID>FA A/11</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:44:49</SystemEntryDate>
-						<Description>FA N� 11/A</Description>
+						<Description>FA N. 11/A</Description>
 						<DebitAmount>7380.00</DebitAmount>
 					</DebitLine>
 				</Lines>
 			</Transaction>
-		</Journal>
-		<Journal>
-			<JournalID>00033</JournalID>
-			<Description>Vendas - CL</Description>
 			<Transaction>
-				<TransactionID>2019-05-31 00033 50012</TransactionID>
+				<TransactionID>2019-05-31 00022 50012</TransactionID>
 				<Period>5</Period>
 				<TransactionDate>2019-05-31</TransactionDate>
 				<SourceID>estg</SourceID>
-				<Description>FA N� 12/A</Description>
+				<Description>FA N. 12/A</Description>
 				<DocArchivalNumber>50012</DocArchivalNumber>
 				<TransactionType>N</TransactionType>
 				<GLPostingDate>2019-05-31</GLPostingDate>
@@ -1395,7 +1324,7 @@
 						<AccountID>131</AccountID>
 						<SourceDocumentID>FA A/12</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:51:32</SystemEntryDate>
-						<Description>FA N� 12/A</Description>
+						<Description>FA N. 12/A</Description>
 						<CreditAmount>65190.00</CreditAmount>
 					</CreditLine>
 					<DebitLine>
@@ -1403,7 +1332,7 @@
 						<AccountID>21110004</AccountID>
 						<SourceDocumentID>FA A/12</SourceDocumentID>
 						<SystemEntryDate>2019-05-31T18:51:32</SystemEntryDate>
-						<Description>FA N� 12/A</Description>
+						<Description>FA N. 12/A</Description>
 						<DebitAmount>65190.00</DebitAmount>
 					</DebitLine>
 				</Lines>

@@ -98,7 +98,7 @@ export default {
         },
         yaxis: {
           min: 0,
-          max: 4000000,
+          max: 130000,
           title: {
             text: 'Sales revenue',
           },

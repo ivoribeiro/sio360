@@ -5,17 +5,17 @@
                 <md-table-cell md-label="Description">
                     {{ item.Description }}
                 </md-table-cell>
-                <md-table-cell v-if="item.salesTotal" md-label="Value ( € )"
-                >{{ item.salesTotal }}
+                <md-table-cell v-if="item.CompanyName" md-label="Company"
+                >{{ item.CompanyName }}
                 </md-table-cell>
-                <md-table-cell md-label="Type"
-                >{{ item.TransactionType }}
+                <md-table-cell v-if="item.total" md-label="Value ( € )"
+                >{{ item.total }}
                 </md-table-cell>
-                <md-table-cell md-label="Debit Lines"
-                >{{ Array.isArray(item.Lines.CreditLine)?item.Lines.CreditLine.length:1 }}
+                <md-table-cell v-if="item.Product.ProductCode" md-label="Product Code"
+                >{{ item.Product.ProductCode }}
                 </md-table-cell>
-                <md-table-cell md-label="Credit Lines"
-                > {{ Array.isArray(item.Lines.DebitLines)?item.Lines.DebitLine.length:1 }}
+                <md-table-cell v-if="item.Product.ProductQty" md-label="Product Quantity"
+                >{{ item.Product.ProductQty }}
                 </md-table-cell>
                 <md-table-cell md-label="Date"
                 >{{ item.TransactionDate }}

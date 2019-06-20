@@ -33,15 +33,6 @@
 		<GeneralLedgerAccounts>
 			<TaxonomyReference>M</TaxonomyReference>
 			<Account>
-				<AccountID>13</AccountID>
-				<AccountDescription>CHY-C/C</AccountDescription>
-				<OpeningDebitBalance>274381.00</OpeningDebitBalance>
-				<OpeningCreditBalance>5000000.00</OpeningCreditBalance>
-				<ClosingDebitBalance>0.00</ClosingDebitBalance>
-				<ClosingCreditBalance>5046034.00</ClosingCreditBalance>
-				<GroupingCategory>GR</GroupingCategory>
-			</Account>
-			<Account>
 				<AccountID>131</AccountID>
 				<AccountDescription>CHY-C/C</AccountDescription>
 				<OpeningDebitBalance>274381.00</OpeningDebitBalance>
@@ -51,15 +42,6 @@
 				<GroupingCategory>GM</GroupingCategory>
 				<GroupingCode>13</GroupingCode>
 				<TaxonomyCode>3</TaxonomyCode>
-			</Account>
-			<Account>
-				<AccountID>21</AccountID>
-				<AccountDescription>Clientes</AccountDescription>
-				<OpeningDebitBalance>0.00</OpeningDebitBalance>
-				<OpeningCreditBalance>0.00</OpeningCreditBalance>
-				<ClosingDebitBalance>264122.50</ClosingDebitBalance>
-				<ClosingCreditBalance>0.00</ClosingCreditBalance>
-				<GroupingCategory>GR</GroupingCategory>
 			</Account>
 			<Account>
 				<AccountID>211</AccountID>
@@ -73,7 +55,7 @@
 			</Account>
 			<Account>
 				<AccountID>21110001</AccountID>
-				<AccountDescription>Universidade do Porto</AccountDescription>
+				<AccountDescription>Univ. do Porto</AccountDescription>
 				<OpeningDebitBalance>0.00</OpeningDebitBalance>
 				<OpeningCreditBalance>0.00</OpeningCreditBalance>
 				<ClosingDebitBalance>27060.00</ClosingDebitBalance>
@@ -83,7 +65,7 @@
 			</Account>
 			<Account>
 				<AccountID>21110002</AccountID>
-				<AccountDescription>Instituto Politécnico do Porto</AccountDescription>
+				<AccountDescription>Inst. Politécnico do Porto</AccountDescription>
 				<OpeningDebitBalance>0.00</OpeningDebitBalance>
 				<OpeningCreditBalance>0.00</OpeningCreditBalance>
 				<ClosingDebitBalance>51660.00</ClosingDebitBalance>
@@ -93,7 +75,7 @@
 			</Account>
 			<Account>
 				<AccountID>21110003</AccountID>
-				<AccountDescription>Universidade de Coimbra</AccountDescription>
+				<AccountDescription>Univ. de Coimbra</AccountDescription>
 				<OpeningDebitBalance>0.00</OpeningDebitBalance>
 				<OpeningCreditBalance>0.00</OpeningCreditBalance>
 				<ClosingDebitBalance>12915.00</ClosingDebitBalance>
@@ -103,7 +85,7 @@
 			</Account>
 			<Account>
 				<AccountID>21110004</AccountID>
-				<AccountDescription>Instituto Universitário de Maia, ISMAI</AccountDescription>
+				<AccountDescription>Inst. Univ. de Maia, ISMAI</AccountDescription>
 				<OpeningDebitBalance>0.00</OpeningDebitBalance>
 				<OpeningCreditBalance>0.00</OpeningCreditBalance>
 				<ClosingDebitBalance>65190.00</ClosingDebitBalance>
@@ -113,7 +95,7 @@
 			</Account>
 			<Account>
 				<AccountID>21110005</AccountID>
-				<AccountDescription>Universidade Católica Portuguesa</AccountDescription>
+				<AccountDescription>Univ. Católica Portuguesa</AccountDescription>
 				<OpeningDebitBalance>0.00</OpeningDebitBalance>
 				<OpeningCreditBalance>0.00</OpeningCreditBalance>
 				<ClosingDebitBalance>30442.50</ClosingDebitBalance>
@@ -172,15 +154,6 @@
 				<GroupingCode>211</GroupingCode>
 			</Account>
 			<Account>
-				<AccountID>22</AccountID>
-				<AccountDescription>Fornecedores</AccountDescription>
-				<OpeningDebitBalance>0.00</OpeningDebitBalance>
-				<OpeningCreditBalance>0.00</OpeningCreditBalance>
-				<ClosingDebitBalance>0.00</ClosingDebitBalance>
-				<ClosingCreditBalance>274381.00</ClosingCreditBalance>
-				<GroupingCategory>GR</GroupingCategory>
-			</Account>
-			<Account>
 				<AccountID>221</AccountID>
 				<AccountDescription>Fornecedores c/c</AccountDescription>
 				<OpeningDebitBalance>0.00</OpeningDebitBalance>
@@ -192,7 +165,7 @@
 			</Account>
 			<Account>
 				<AccountID>22110001</AccountID>
-				<AccountDescription>Apple Inc.</AccountDescription>
+				<AccountDescription>Apple PT Inc.</AccountDescription>
 				<OpeningDebitBalance>0.00</OpeningDebitBalance>
 				<OpeningCreditBalance>0.00</OpeningCreditBalance>
 				<ClosingDebitBalance>0.00</ClosingDebitBalance>
@@ -203,7 +176,7 @@
 			</Account>
 			<Account>
 				<AccountID>22130002</AccountID>
-				<AccountDescription>Apple Inc.</AccountDescription>
+				<AccountDescription>Apple ES Inc.</AccountDescription>
 				<OpeningDebitBalance>0.00</OpeningDebitBalance>
 				<OpeningCreditBalance>0.00</OpeningCreditBalance>
 				<ClosingDebitBalance>0.00</ClosingDebitBalance>
@@ -214,29 +187,10 @@
 			</Account>
 		</GeneralLedgerAccounts>
 		<Customer>
-			<CustomerID>Consumidor final</CustomerID>
-			<AccountID>Desconhecido</AccountID>
-			<CustomerTaxID>999999990</CustomerTaxID>
-			<CompanyName>Consumidor final</CompanyName>
-			<BillingAddress>
-				<AddressDetail>Desconhecido</AddressDetail>
-				<City>Desconhecido</City>
-				<PostalCode>Desconhecido</PostalCode>
-				<Country>Desconhecido</Country>
-			</BillingAddress>
-			<ShipToAddress>
-				<AddressDetail>Desconhecido</AddressDetail>
-				<City>Desconhecido</City>
-				<PostalCode>Desconhecido</PostalCode>
-				<Country>Desconhecido</Country>
-			</ShipToAddress>
-			<SelfBillingIndicator>0</SelfBillingIndicator>
-		</Customer>
-		<Customer>
 			<CustomerID>501413197_C</CustomerID>
 			<AccountID>21110001</AccountID>
 			<CustomerTaxID>501413197</CustomerTaxID>
-			<CompanyName>UNIVERSIDADE DO PORTO</CompanyName>
+			<CompanyName>UNIV. DO PORTO</CompanyName>
 			<BillingAddress>
 				<AddressDetail>Praca de Gomes Teixeira</AddressDetail>
 				<City>Porto</City>
@@ -259,7 +213,7 @@
 			<CustomerID>504606251_C</CustomerID>
 			<AccountID>21110002</AccountID>
 			<CustomerTaxID>504606251</CustomerTaxID>
-			<CompanyName>INSTITUTO POLITECNICO DO PORTO</CompanyName>
+			<CompanyName>INST. POLITECNICO DO PORTO</CompanyName>
 			<BillingAddress>
 				<AddressDetail>Rua Dr. Roberto Frias, 712</AddressDetail>
 				<City>Porto</City>
@@ -282,7 +236,7 @@
 			<CustomerID>501617582_C</CustomerID>
 			<AccountID>21110003</AccountID>
 			<CustomerTaxID>501617582</CustomerTaxID>
-			<CompanyName>UNIVERSIDADE DE COIMBRA</CompanyName>
+			<CompanyName>UNIV. DE COIMBRA</CompanyName>
 			<BillingAddress>
 				<AddressDetail>Rua Larga</AddressDetail>
 				<City>Coimbra</City>
@@ -305,7 +259,7 @@
 			<CustomerID>502514531_C</CustomerID>
 			<AccountID>21110004</AccountID>
 			<CustomerTaxID>502514531</CustomerTaxID>
-			<CompanyName>ISMAI INSTITUTO UNIVERSITARIO DA MAIA</CompanyName>
+			<CompanyName>ISMAI INST. UNIV. DA MAIA</CompanyName>
 			<BillingAddress>
 				<AddressDetail>Avenida Carlos de Oliveira Campos</AddressDetail>
 				<City>Maia</City>
@@ -328,7 +282,7 @@
 			<CustomerID>501082522_C</CustomerID>
 			<AccountID>21110005</AccountID>
 			<CustomerTaxID>501082522</CustomerTaxID>
-			<CompanyName>UNIVERSIDADE CATOLICA PORTUGUESA</CompanyName>
+			<CompanyName>UNIV. CATOLICA PORTUGUESA</CompanyName>
 			<BillingAddress>
 				<AddressDetail>Palma de Cima</AddressDetail>
 				<City>Lisboa</City>
@@ -443,7 +397,7 @@
 			<CustomerID>ES524229770_C</CustomerID>
 			<AccountID>21130010</AccountID>
 			<CustomerTaxID>524229770</CustomerTaxID>
-			<CompanyName>AMAZON ESPANA</CompanyName>
+			<CompanyName>AMAZON ES.</CompanyName>
 			<BillingAddress>
 				<AddressDetail>Calle de Ramirez de Prado, 5</AddressDetail>
 				<City>Madrid</City>
@@ -466,7 +420,7 @@
 			<SupplierID>508141966_F</SupplierID>
 			<AccountID>22110001</AccountID>
 			<SupplierTaxID>508141966</SupplierTaxID>
-			<CompanyName>APPLE PORTUGAL INC.</CompanyName>
+			<CompanyName>APPLE PT INC.</CompanyName>
 			<BillingAddress>
 				<AddressDetail>Rua Sara Afonso</AddressDetail>
 				<City>Porto</City>
@@ -486,7 +440,7 @@
 			<SupplierID>555846700_F</SupplierID>
 			<AccountID>22130002</AccountID>
 			<SupplierTaxID>555846700</SupplierTaxID>
-			<CompanyName>APPLE ESPANA INC</CompanyName>
+			<CompanyName>APPLE ES INC</CompanyName>
 			<BillingAddress>
 				<AddressDetail>Plaza de la Puerta del Sol, 1</AddressDetail>
 				<City>Madrid</City>

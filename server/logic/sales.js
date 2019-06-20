@@ -1,24 +1,36 @@
 'use strict'
 const Moment = require('moment')
 
-const sales = (Journals) => {
+const sales = (Journals, Customers) => {
   const transactions = Journals.journalTransactions('00022')
+  transactions[0].Transaction = transactions[0].Transaction.map((sale) => {
+    sale.total = 0
+    sale.Lines.CreditLine.map((line) => {
+      if (line.CreditAmount) {
+        sale.total = parseFloat(line.CreditAmount) + parseFloat(sale.total)
+      }
+    })
+    const { CompanyName } = Customers.byId(sale.CustomerID)
+    sale.CompanyName = CompanyName
+    return sale
+  })
+
   return transactions[0]
 }
 
-const salesByRevenue = (Journals) => {
-  const sales = this.sales(Journals)
+const salesByRevenue = (Journals, Customers) => {
+  const sales = this.sales(Journals, Customers)
   const withTotal = sales.Transaction.map((sale) => {
-    sale.salesTotal = 0
+    sale.total = 0
     sale.Lines.CreditLine.map((line) => {
       if (line.CreditAmount) {
-        sale.salesTotal = parseInt(line.CreditAmount) + parseInt(sale.salesTotal)
+        sale.total = parseFloat(line.CreditAmount) + parseFloat(sale.total)
       }
     })
     return sale
   })
   sales.Transaction = withTotal.sort((a, b) => {
-    return b.salesTotal - a.salesTotal
+    return b.total - a.total
   })
   return sales
 }
@@ -39,8 +51,8 @@ const salesByMonth = (Journals) => {
   })
   return { sales: Object.values(salesPerMonth), months: Array.from(monthSet) }
 }
-const salesValueByMonth = (Journals) => {
-  const sales = this.salesByRevenue(Journals)
+const salesValueByMonth = (Journals, Customers) => {
+  const sales = this.salesByRevenue(Journals, Customers)
   const monthSet = new Set()
   let salesPerMonth = {}
   sales.Transaction.map((sale) => {
@@ -50,20 +62,21 @@ const salesValueByMonth = (Journals) => {
     if (salesPerMonth[month] === undefined) {
       salesPerMonth[month] = 0
     }
-    salesPerMonth[month] = salesPerMonth[month] + sale.salesTotal
+    salesPerMonth[month] = salesPerMonth[month] + sale.total
     return month
   })
   return { sales: Object.values(salesPerMonth), months: Array.from(monthSet) }
 }
 
-const salesValueByCustomer = (Journals) => {
-  const sales = this.salesByRevenue(Journals)
+const salesValueByCustomer = (Journals, Customers) => {
+  const sales = this.salesByRevenue(Journals, Customers)
   let salesPerCustomer = {}
   sales.Transaction.map((sale) => {
-    if (salesPerCustomer[sale.CustomerID] === undefined) {
-      salesPerCustomer[sale.CustomerID] = 0
+    const { CompanyName } = Customers.byId(sale.CustomerID)
+    if (salesPerCustomer[CompanyName] === undefined) {
+      salesPerCustomer[CompanyName] = 0
     }
-    salesPerCustomer[sale.CustomerID] = salesPerCustomer[sale.CustomerID] + sale.salesTotal
+    salesPerCustomer[CompanyName] = salesPerCustomer[CompanyName] + sale.total
     return sale
   })
   return { sales: Object.values(salesPerCustomer), customers: Object.keys(salesPerCustomer) }
@@ -82,18 +95,14 @@ const salesByCustomer = (Journals) => {
   return { sales: Object.values(salesPerCustomer), customers: Object.keys(salesPerCustomer) }
 }
 
-const salesStats = (Journals) => {
-  const sales = this.sales(Journals)
+const salesStats = (Journals, Customers) => {
+  const sales = this.sales(Journals, Customers)
   let salesTotal = 0
   sales.Transaction.map((sale) => {
-    sale.Lines.CreditLine.map((line) => {
-      if (line.CreditAmount) {
-        salesTotal = parseInt(line.CreditAmount) + parseInt(salesTotal)
-      }
-    })
+    salesTotal = parseInt(sale.total) + parseInt(salesTotal)
   })
-  const byValue = salesValueByMonth(Journals)
-  const byCustomer = salesValueByCustomer(Journals)
+  const byValue = salesValueByMonth(Journals, Customers)
+  const byCustomer = salesValueByCustomer(Journals, Customers)
   return { salesTotal, salesValueByMonth: byValue, salesValueByCustomer: byCustomer }
 }
 

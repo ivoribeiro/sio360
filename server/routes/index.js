@@ -76,27 +76,27 @@ router.get('/company/products', function (req, res, next) {
 })
 
 router.get('/company/sales', function (req, res, next) {
-  const sales = Sales.sales(Journal)
+  const sales = Sales.sales(Journal, Customers)
   res.json(sales)
 })
 
 router.get('/company/sales/byRevenue', function (req, res, next) {
-  const sales = Sales.salesByRevenue(Journal)
+  const sales = Sales.salesByRevenue(Journal, Customers)
   res.json(sales)
 })
 
 router.get('/company/sales/stats', function (req, res, next) {
-  const sales = Sales.salesStats(Journal)
+  const sales = Sales.salesStats(Journal, Customers)
   res.json(sales)
 })
 
 router.get('/company/purchases', function (req, res, next) {
-  const purchases = Purchases.purchases(Journal)
+  const purchases = Purchases.purchases(Journal, Suppliers)
   res.json(purchases)
 })
 
 router.get('/company/purchases/stats', function (req, res, next) {
-  const stats = Purchases.stats(Journal)
+  const stats = Purchases.stats(Journal, Suppliers)
   res.json(stats)
 })
 

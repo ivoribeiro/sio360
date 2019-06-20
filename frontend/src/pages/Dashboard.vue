@@ -178,6 +178,33 @@
                     </template>
                 </pie-chart>
             </div>
+            <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-100">
+                <pie-chart :categories="productSalesChart.categories" :series="productSalesChart.data" :width=600
+                           data-background-color="red">
+                    <template slot="header">
+                        <md-card-header
+                                data-background-color="red">
+                            <h4 class="title">Products Chart</h4>
+                            <p class="category">Pie chart comparing sales by product </p>
+                        </md-card-header>
+                    </template>
+                    <template slot="content">
+                        <h4 class="title">ROI Percentage</h4>
+                        <p class="category">
+              <span class="text-success"
+              ><i class="fas fa-long-arrow-alt-up"></i> {{parseFloat(((salesTotal-purchasesTotal)/purchasesTotal)*100).toFixed(2)}}
+              </span>
+                            % of ROI between costs with purchases and sales
+                        </p>
+                    </template>
+                    <template slot="footer">
+                        <div class="stats">
+                            <md-icon>access_time</md-icon>
+                            Just Updated
+                        </div>
+                    </template>
+                </pie-chart>
+            </div>
         </div>
     </div>
 </template>
@@ -217,7 +244,8 @@ export default {
       customers: [],
       suppliers: [],
       monthlySalesChart: [],
-      customerSalesChart: []
+      customerSalesChart: [],
+      productSalesChart: []
     }
   },
   mounted () {
@@ -235,6 +263,15 @@ export default {
       }]
 
     })
+    axios
+      .get(process.env.VUE_APP_API_URL + '/company/products/sales')
+      .then(response => {
+        this.productSalesChart = {
+          name: 'revenue',
+          data: response.data.sales,
+          categories: response.data.products
+        }
+      })
     axios
       .get(process.env.VUE_APP_API_URL + '/company/sales/byRevenue')
       .then(response => {

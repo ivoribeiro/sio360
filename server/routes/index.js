@@ -75,6 +75,11 @@ router.get('/company/products', function (req, res, next) {
   res.json(products)
 })
 
+router.get('/company/products/sales', function (req, res, next) {
+  const products = Products.productsSales()
+  res.json(products)
+})
+
 router.get('/company/sales', function (req, res, next) {
   const sales = Sales.sales(Journal, Customers)
   res.json(sales)
@@ -86,7 +91,7 @@ router.get('/company/sales/byRevenue', function (req, res, next) {
 })
 
 router.get('/company/sales/stats', function (req, res, next) {
-  const sales = Sales.salesStats(Journal, Customers)
+  const sales = Sales.salesStats(Journal, Customers, Products)
   res.json(sales)
 })
 

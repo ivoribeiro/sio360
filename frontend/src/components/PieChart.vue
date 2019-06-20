@@ -18,6 +18,10 @@ import VueApexCharts from 'vue-apexcharts'
 export default {
   component: [VueApexCharts],
   props: {
+    categories: {
+      type: Array,
+      default: ['Sales', 'Purchases'],
+    },
     width: {
       type: Number,
       default: 300
@@ -34,7 +38,7 @@ export default {
   data () {
     return {
       chartOptions: {
-        labels: ['Sales', 'Purchases'],
+        labels: this.categories,
         responsive: [{
           breakpoint: 480,
           options: {

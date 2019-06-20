@@ -21,7 +21,7 @@ const productsSales = () => {
     if (salesPerProducts[product.ProductCode] === undefined) {
       salesPerProducts[product.ProductCode] = 0
     }
-    salesPerProducts[product.ProductCode] = (product.InitialStock + product.ExtraStock) - product.CurrentStock
+    salesPerProducts[product.ProductCode] = (parseInt(product.InitialStock) + parseInt(product.ExtraStock)) - parseInt(product.CurrentStock)
     return product
   })
   return { sales: Object.values(salesPerProducts), products: Object.keys(salesPerProducts) }

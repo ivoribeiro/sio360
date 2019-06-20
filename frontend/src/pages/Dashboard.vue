@@ -153,7 +153,8 @@
                 </md-card>
             </div>
             <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50">
-                <pie-chart :series="[salesTotal,purchasesTotal]" :width=600 data-background-color="blue">
+                <pie-chart :categories="['Sales', 'Purchases']" :series="[salesTotal,purchasesTotal]" :width=600
+                           data-background-color="blue">
                     <template slot="header">
                         <md-card-header
                                 data-background-color="blue">
@@ -249,6 +250,15 @@ export default {
     }
   },
   mounted () {
+    axios
+      .get(process.env.VUE_APP_API_URL + '/company/products/sales')
+      .then(response => {
+        this.productSalesChart = {
+          name: 'revenue',
+          data: response.data.sales,
+          categories: response.data.products
+        }
+      })
     axios.get(process.env.VUE_APP_API_URL + '/company/sales/stats').then(response => {
       this.salesTotal = response.data.salesTotal
       this.monthlySalesChart = [{
@@ -263,15 +273,6 @@ export default {
       }]
 
     })
-    axios
-      .get(process.env.VUE_APP_API_URL + '/company/products/sales')
-      .then(response => {
-        this.productSalesChart = {
-          name: 'revenue',
-          data: response.data.sales,
-          categories: response.data.products
-        }
-      })
     axios
       .get(process.env.VUE_APP_API_URL + '/company/sales/byRevenue')
       .then(response => {

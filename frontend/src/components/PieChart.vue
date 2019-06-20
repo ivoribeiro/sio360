@@ -20,7 +20,7 @@ export default {
   props: {
     categories: {
       type: Array,
-      default: ['Sales', 'Purchases'],
+      default: [],
     },
     width: {
       type: Number,
@@ -36,6 +36,8 @@ export default {
     }
   },
   data () {
+    console.log(this.categories)
+    console.log(this.series)
     return {
       chartOptions: {
         labels: this.categories,

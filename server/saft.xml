@@ -464,6 +464,7 @@
 			<ProductDescription>Macbook Pro 13 128GB SSD, PRATEADO</ProductDescription>
 			<ProductNumberCode>M1.1</ProductNumberCode>
 			<InitialStock>40</InitialStock>
+			<ExtraStock>25</ExtraStock>
 			<CurrentStock>40</CurrentStock>
 		</Product>
 		<Product>
@@ -473,6 +474,7 @@
 			<ProductDescription>Macbook Pro 13 128GB SSD, CINZA</ProductDescription>
 			<ProductNumberCode>M1.2</ProductNumberCode>
 			<InitialStock>40</InitialStock>
+			<ExtraStock>10</ExtraStock>
 			<CurrentStock>35</CurrentStock>
 		</Product>
 		<Product>
@@ -482,6 +484,7 @@
 			<ProductDescription>Macbook Pro 13 256GB SSD, PRATEADO</ProductDescription>
 			<ProductNumberCode>M2.1</ProductNumberCode>
 			<InitialStock>40</InitialStock>
+			<ExtraStock>0</ExtraStock>
 			<CurrentStock>15</CurrentStock>
 		</Product>
 		<Product>
@@ -491,6 +494,7 @@
 			<ProductDescription>Macbook Pro 13 256GB SSD, CINZA</ProductDescription>
 			<ProductNumberCode>M2.2</ProductNumberCode>
 			<InitialStock>40</InitialStock>
+			<ExtraStock>5</ExtraStock>
 			<CurrentStock>20</CurrentStock>
 		</Product>
 		<Product>
@@ -500,6 +504,7 @@
 			<ProductDescription>Macbook Pro 15 256GB SSD, PRATEADO</ProductDescription>
 			<ProductNumberCode>M3.1</ProductNumberCode>
 			<InitialStock>40</InitialStock>
+			<ExtraStock>35</ExtraStock>
 			<CurrentStock>64</CurrentStock>
 		</Product>
 		<Product>
@@ -509,6 +514,7 @@
 			<ProductDescription>Macbook Pro 15 256GB SSD, CINZA</ProductDescription>
 			<ProductNumberCode>M3.2</ProductNumberCode>
 			<InitialStock>40</InitialStock>
+			<ExtraStock>0</ExtraStock>
 			<CurrentStock>38</CurrentStock>
 		</Product>
 		<Product>
@@ -518,6 +524,7 @@
 			<ProductDescription>Macbook Pro 15 512GB SSD, PRATEADO</ProductDescription>
 			<ProductNumberCode>M4.1</ProductNumberCode>
 			<InitialStock>40</InitialStock>
+			<ExtraStock>0</ExtraStock>
 			<CurrentStock>37</CurrentStock>
 		</Product>
 		<Product>
@@ -527,6 +534,7 @@
 			<ProductDescription>Macbook Pro 15 512GB SSD, CINZA</ProductDescription>
 			<ProductNumberCode>M4.2</ProductNumberCode>
 			<InitialStock>40</InitialStock>
+			<ExtraStock>65</ExtraStock>
 			<CurrentStock>88</CurrentStock>
 		</Product>
 		<TaxTable>
